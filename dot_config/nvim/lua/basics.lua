@@ -59,13 +59,14 @@ vim.api.nvim_set_keymap('n', '<leader><tab>', ":NERDTreeToggle<CR>", { noremap =
 vim.api.nvim_set_keymap('n', '<leader>co', ':VCoolor<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'rp', ':%s/', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ut', ":UndotreeToggle<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>m', ":PrettierAsync<CR>", { noremap = true })
 
 vim.g["NERDTreeWinPos"] = "right"
 -- vim.g["NERDTreeWinPos"] = "left"
 vim.g["NERDTreeShowHidden"] = 1
 vim.g["NERDTreeIgnore"] = {'.DS_Store$' }
 
-vim.g["prettier#autoformat"] = 1
-vim.g["prettier#autoformat_require_pragma"] = 0
-vim.cmd('autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync')
+-- vim.g["prettier#autoformat"] = 1
+-- vim.g["prettier#autoformat_require_pragma"] = 0
+-- vim.cmd('autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync')
 vim.g["vcoolor_lowercase"] = 1
