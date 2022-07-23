@@ -44,10 +44,11 @@ function()
 
   -- misc
   use 'KabbAmine/vCoolor.vim'
-  use 'nvim-treesitter/nvim-treesitter' 
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'mbbill/undotree'
 
   -- themes
+  use 'catppuccin/nvim'
   use 'ayu-theme/ayu-vim'
   use 'morhetz/gruvbox'
   use 'altercation/vim-colors-solarized'

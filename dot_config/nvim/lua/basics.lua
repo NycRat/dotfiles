@@ -1,6 +1,7 @@
 vim.g.tokyonight_style = "night"
 vim.g.ayucolor = "light"
-vim.cmd[[colorscheme gruvbox]]
+vim.g.catppuccin_flavour = "mocha"
+vim.cmd[[colorscheme catppuccin]]
 
 vim.g.mapleader = " "
 vim.o.autoindent = true
