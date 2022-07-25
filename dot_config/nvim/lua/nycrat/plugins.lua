@@ -34,24 +34,8 @@ function()
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
-  use {
-    'lukas-reineke/indent-blankline.nvim',
-    config = function()
-      require"indent-blankline".setup {
-        char = "▏",
-        show_trailing_blankline_indent = false,
-        show_first_indent_level = true,
-        use_treesitter = true,
-        show_current_context = true,
-        buftype_exclude = { "terminal", "nofile" },
-        filetype_exclude = {
-          "help",
-          "packer",
-          "NvimTree",
-        }
-      }
-    end
-  }
+
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- color themes
   use 'catppuccin/nvim'

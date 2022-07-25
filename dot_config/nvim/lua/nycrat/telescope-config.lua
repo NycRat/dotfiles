@@ -1,13 +1,13 @@
-local telescope = require("telescope")
-
-telescope.setup{
+require("telescope").setup{
   defaults = {
-    file_ignore_patterns = {"node_modules"}
+    file_ignore_patterns = {"node_modules"},
+    prompt_prefix = " ",
+    selection_caret = " ",
   },
   pickers = {
     find_files = {
-      -- theme = "ivy",
-      theme = "dropdown",
+      theme = "ivy",
+      -- theme = "dropdown",
       -- theme = "cursor",
     }
   }
