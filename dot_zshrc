@@ -59,4 +59,9 @@ alias PLEASE="nvim"
 export EDITOR=nvim
 export editor=nvim
 
+alias t="tmux"
+alias tk="tmux kill-session -t"
+alias ta="tmux attach -t"
+alias tn="tmux new -s"
+
 export PATH="$PATH:$(yarn global bin)"

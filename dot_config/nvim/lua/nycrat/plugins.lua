@@ -6,7 +6,7 @@ function()
   -- easier coding
   use {'neoclide/coc.nvim', branch = 'release'}
   use {'prettier/vim-prettier', run = 'yarn install'}
-  use 'tpope/vim-commentary'
+  use 'numToStr/Comment.nvim'
   use 'jiangmiao/auto-pairs'
   use 'github/copilot.vim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
