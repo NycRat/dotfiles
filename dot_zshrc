@@ -61,6 +61,7 @@ export editor=nvim
 
 alias t="tmux"
 alias tk="tmux kill-session -t"
+alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new -s"
 

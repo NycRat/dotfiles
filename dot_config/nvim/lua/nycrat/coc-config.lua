@@ -1,7 +1,7 @@
 vim.api.nvim_set_keymap("n", "<leader>.", "<Plug>(coc-codeaction)", {})
 vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
 vim.api.nvim_set_keymap("n", "K", ":call CocActionAsync('doHover')<CR>", {silent = true, noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
+vim.api.nvim_set_keymap("n", "<leader>r", "<Plug>(coc-rename)", {})
 vim.api.nvim_set_keymap("n", "<leader>f", "<Plug>(coc-definition)", {silent = true})
 vim.api.nvim_set_keymap("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 
