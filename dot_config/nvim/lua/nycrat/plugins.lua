@@ -11,6 +11,7 @@ function()
   use 'github/copilot.vim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'MaxMEllon/vim-jsx-pretty'
+  use 'rhysd/vim-clang-format'
 
   -- navigation
   use 'preservim/nerdtree'
@@ -34,8 +35,8 @@ function()
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
-
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'junegunn/rainbow_parentheses.vim'
 
   -- color themes
   use 'catppuccin/nvim'

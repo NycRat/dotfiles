@@ -13,7 +13,16 @@ require('nvim-treesitter.configs').setup {
     enable = true
   },
   indent = {
-    enable = true
+    enable = true,
+    disable = {"cpp"}
   }
-} 
+}
 
+vim.g["rainbow#max_level"]= "16"
+
+-- vim.g["rainbow#pairs"] = {{'(', ')'}, {'[', ']'}, {'{', '}'}}
+vim.g["rainbow#pairs"] = {{'(', ')'}, {'{', '}'}}
+
+vim.cmd[[autocmd FileType * RainbowParentheses]]
+
+vim.g["clang_format#detect_style_file)"] = 1

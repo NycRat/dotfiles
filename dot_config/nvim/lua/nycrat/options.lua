@@ -1,20 +1,18 @@
 local options = {
   autoindent = true,
   smartindent = true,
-  smarttab = true,
-  expandtab = true,
-  shiftround = true,
-  shiftwidth = 2,
   tabstop = 2,
-  numberwidth = 4,
+  shiftwidth = 2,
+  expandtab = true,
   showtabline = 2,
 
   number = true,
   relativenumber = true,
+  numberwidth = 4,
 
   incsearch = true,
   hlsearch = false,
-  -- ignorecase = true,
+  ignorecase = true,
   smartcase = true,
 
   splitbelow = true,
@@ -22,7 +20,7 @@ local options = {
 
   termguicolors = true,
   hidden = true,
-  signcolumn = 'yes',
+  signcolumn = "yes",
   showmode = false,
   backup = false,
   writebackup = false,
@@ -32,18 +30,18 @@ local options = {
   cursorline = true,
   fileencoding = "utf-8",
 
-
-  colorcolumn = '80',
+  colorcolumn = "80",
   updatetime = 200,
   scrolloff = 10,
   mouse = 'a',
   guicursor = 'a:block',
 
   title = true,
-  titlestring = "%f - RatNvim"
+  titlestring = "%t - RatNvim"
 }
 
-vim.opt.shortmess:append "I" -- don't show default startup message
+
+-- vim.opt.shortmess:append "I" -- don't show default startup message
 
 for option, value in pairs(options) do
   vim.opt[option] = value

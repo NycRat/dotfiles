@@ -4,13 +4,6 @@ require("telescope").setup{
     prompt_prefix = " ",
     selection_caret = " ",
   },
-  pickers = {
-    find_files = {
-      theme = "ivy",
-      -- theme = "dropdown",
-      -- theme = "cursor",
-    }
-  }
 }
 
 vim.api.nvim_set_keymap('n', '<leader>p', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
