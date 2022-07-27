@@ -14,7 +14,8 @@ vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i",
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
 
 -- misc
-vim.api.nvim_set_keymap('n', '<leader>v', ':vs<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>sv', ':vs<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>sh', ':sp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader><tab>', ":NERDTreeToggle<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>co', ':VCoolor<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>rp', ':%s/', { noremap = true })
