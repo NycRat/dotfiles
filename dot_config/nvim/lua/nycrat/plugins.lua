@@ -15,8 +15,8 @@ function()
 
   -- navigation
   use 'preservim/nerdtree'
-  use 'Xuyuanp/nerdtree-git-plugin' 
-  use 'tiagofumo/vim-nerdtree-syntax-highlight' 
+  use 'Xuyuanp/nerdtree-git-plugin'
+  use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
   use {
     'nvim-telescope/telescope.nvim',
