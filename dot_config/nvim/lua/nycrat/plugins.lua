@@ -2,6 +2,7 @@ require('packer').startup(
 function()
 
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
   
   -- easier coding
   use {'neoclide/coc.nvim', branch = 'release'}
@@ -18,10 +19,8 @@ function()
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  use 'nvim-telescope/telescope.nvim'
+  use 'ThePrimeagen/harpoon'
 
   -- git
   use 'airblade/vim-gitgutter'
