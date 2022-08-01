@@ -48,6 +48,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
@@ -55,6 +58,7 @@ alias n="nvim"
 alias woah="nvim"
 alias please="nvim"
 alias PLEASE="nvim"
+alias wvim="nvim"
 
 export EDITOR=nvim
 export editor=nvim
@@ -65,4 +69,9 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new -s"
 
+alias python="python3"
+alias py="python3"
+
 export PATH="$PATH:$(yarn global bin)"
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

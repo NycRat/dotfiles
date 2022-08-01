@@ -37,11 +37,11 @@ local options = {
   guicursor = 'a:block',
 
   title = true,
-  titlestring = "%t - RatNvim"
+  titlestring = "%t - Wvim"
 }
 
 
--- vim.opt.shortmess:append "I" -- don't show default startup message
+vim.opt.shortmess:append "I" -- don't show default startup message
 
 for option, value in pairs(options) do
   vim.opt[option] = value

@@ -2,7 +2,8 @@
 
 require('nycrat.options')
 require('nycrat.keymaps')
-require('nycrat.plugin_misc_config')
+require('nycrat.plugin-misc-config')
+require('nycrat.harpoon-config')
 require('nycrat.telescope-config')
 require('nycrat.coc-config')
 require('nycrat.comment-config')
