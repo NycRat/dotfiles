@@ -1,9 +1,10 @@
- vim.g.mapleader = " "
+vim.g.mapleader = " "
+
+require('impatient')
 
 require('nycrat.options')
 require('nycrat.keymaps')
 require('nycrat.plugin-misc-config')
-require('nycrat.harpoon-config')
 require('nycrat.telescope-config')
 require('nycrat.coc-config')
 require('nycrat.comment-config')

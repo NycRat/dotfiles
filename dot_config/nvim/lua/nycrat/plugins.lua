@@ -3,7 +3,7 @@ function()
 
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
-  
+
   -- easier coding
   use {'neoclide/coc.nvim', branch = 'release'}
   use {'prettier/vim-prettier', run = 'yarn install'}
@@ -21,7 +21,9 @@ function()
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
   use 'nvim-telescope/telescope.nvim'
-  use 'ThePrimeagen/harpoon'
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  -- use 'ThePrimeagen/harpoon' -- THIS PLUGIN JUST SO SLOW CURRENTLY
 
   -- git
   use 'airblade/vim-gitgutter'
@@ -36,7 +38,7 @@ function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'junegunn/rainbow_parentheses.vim'
+  use 'lewis6991/impatient.nvim'
 
   -- color themes
   use 'catppuccin/nvim'
