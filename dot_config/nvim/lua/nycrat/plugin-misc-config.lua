@@ -21,7 +21,3 @@ require('nvim-treesitter.configs').setup {
 vim.g["clang_format#detect_style_file)"] = 1
 
 vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
-
-vim.g["copilot_filetypes"] = {
-  "txt: v:false"
-}

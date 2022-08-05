@@ -54,11 +54,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
-alias n="nvim"
-alias woah="nvim"
-alias please="nvim"
-alias PLEASE="nvim"
-alias wvim="nvim"
+alias n="neovide"
+alias ne="neovide"
+alias neo="neovide"
 
 export EDITOR=nvim
 export editor=nvim

@@ -9,7 +9,6 @@ function()
   use {'prettier/vim-prettier', run = 'yarn install'}
   use 'numToStr/Comment.nvim'
   use 'jiangmiao/auto-pairs'
-  use 'github/copilot.vim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'MaxMEllon/vim-jsx-pretty'
   use 'rhysd/vim-clang-format'

@@ -27,6 +27,7 @@ local options = {
   errorbells = false,
   swapfile = false,
   wrap = false,
+  -- cursorline = false,
   cursorline = true,
   fileencoding = "utf-8",
 
@@ -37,9 +38,10 @@ local options = {
   guicursor = 'a:block',
 
   title = true,
-  titlestring = "%t - Wvim"
+  titlestring = "%t - Wvim",
+  guifont = "MesloLGS NF:h18",
+  clipboard = "unnamedplus"
 }
-
 
 vim.opt.shortmess:append "I" -- don't show default startup message
 
