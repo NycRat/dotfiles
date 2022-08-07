@@ -35,7 +35,7 @@ local options = {
   updatetime = 200,
   scrolloff = 10,
   mouse = 'a',
-  guicursor = 'a:block',
+  -- guicursor = 'a:block',
 
   title = true,
   titlestring = "%t - Wvim",
