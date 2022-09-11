@@ -7,9 +7,7 @@ local options = {
   showtabline = 2,
 
   number = true,
-  relativenumber = true,
-  numberwidth = 4,
-
+  relativenumber = true, numberwidth = 4,
   incsearch = true,
   hlsearch = false,
   ignorecase = true,
@@ -35,12 +33,15 @@ local options = {
   updatetime = 200,
   scrolloff = 10,
   mouse = 'a',
-  -- guicursor = 'a:block',
+  guicursor = 'a:block',
 
   title = true,
   titlestring = "%t - Wvim",
   guifont = "MesloLGS NF:h18",
-  clipboard = "unnamedplus"
+  -- guifont = "Operator Mono:h20",
+  clipboard = "unnamedplus",
+
+  spell = true
 }
 
 vim.opt.shortmess:append "I" -- don't show default startup message

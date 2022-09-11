@@ -57,8 +57,5 @@ require("telescope").setup{
   },
 }
 
-require("telescope").load_extension "fzf"
-
-vim.api.nvim_set_keymap('n', '<leader>p', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>x', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
+require("telescope").load_extension("fzf")
+require("telescope").load_extension("lazygit")
