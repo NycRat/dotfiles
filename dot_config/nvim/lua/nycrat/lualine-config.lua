@@ -20,6 +20,7 @@ require('lualine').setup({
     lualine_c = {
       "filename",
       { getWords }
-    }
+    },
+    lualine_x = {'filetype'},
   }
 })

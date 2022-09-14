@@ -26,31 +26,37 @@ nnoremap("N", "Nzzzv")
 -- nnoremap("<S-W>j", "<C-W>+")
 
 -- Moving Text
-vnoremap("J", ":m '>+1<CR>gv=gv")
-vnoremap("K", ":m '<-2<CR>gv=gv")
+vnoremap("J", ":m '>+1<CR>gv=gv", { silent = true })
+vnoremap("K", ":m '<-2<CR>gv=gv", { silent = true })
+
+-- Copy Paste
+vnoremap("<D-c>", "\"+y");
+
+inoremap("<D-v>", "<C-o>\"+p");
+nnoremap("<D-v>", "\"+p");
+vnoremap("<D-v>", "\"+p");
 
 -- built in terminal
-nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", { silent = true })
+nnoremap("<nnoremap>t", ":sp<CR> :term<CR> :resize 20N<CR> i", { silent = true })
 -- nnoremap("<Esc>", "<C-\\><C-n>", { silent = true })
 tnoremap("<C-q>", "<C-\\><C-n>", { silent = true })
 
 -- misc
 
--- nnoremap("<leader>sv", ":vs<CR>")
--- nnoremap("<leader>sh", ":sp<CR>")
-nnoremap("<leader><tab>", ":NERDTreeToggle<CR>")
-nnoremap("<leader>co", ":VCoolor<CR>")
+vnoremap("<leader>p", "\"_dP")
+nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", { silent = true })
+nnoremap("<leader>co", ":VCoolor<CR>", { silent = true })
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-nnoremap("<leader>u", ":UndotreeToggle<CR>")
-nnoremap("<leader>gg", ":LazyGit<CR>")
+nnoremap("<leader>u", ":UndotreeToggle<CR>", { silent = true })
+nnoremap("<leader>gg", ":LazyGit<CR>", { silent = true })
 nnoremap('<leader>m', ":Neoformat<CR>")
 vnoremap('<leader>m', ":Neoformat<CR>")
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":q<CR>")
 
-nnoremap("<leader>e", ":Peepsight<CR>")
+nnoremap("<leader>e", ":Peepsight<CR>", { silent = true })
 
-nnoremap("<C-->", ":GUIFontSizeChange -1<CR>")
-nnoremap("<C-=>", ":GUIFontSizeChange +1<CR>")
-inoremap("<C-->", "<Esc>:GUIFontSizeChange -1<CR>a")
-inoremap("<C-=>", "<Esc>:GUIFontSizeChange +1<CR>a")
+nnoremap("<C-->", ":GUIFontSizeChange -1<CR>", { silent = true })
+nnoremap("<C-=>", ":GUIFontSizeChange +1<CR>", { silent = true })
+inoremap("<C-->", "<Esc>:GUIFontSizeChange -1<CR>a", { silent = true })
+inoremap("<C-=>", "<Esc>:GUIFontSizeChange +1<CR>a", { silent = true })

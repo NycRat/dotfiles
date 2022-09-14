@@ -38,8 +38,8 @@ local options = {
   title = true,
   titlestring = "%t - Wvim",
   guifont = "MesloLGS NF:h18",
-  -- guifont = "Operator Mono:h20",
-  clipboard = "unnamedplus",
+  -- guifont = "Seven Segment:h20",
+  -- clipboard = "unnamedplus",
 
   spell = true
 }
