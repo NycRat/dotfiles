@@ -1,10 +1,6 @@
+require('nycrat.plugins')
+
 require('nycrat.options')
 require('nycrat.keymap')
-require('nycrat.plugin-misc-config')
-require('nycrat.telescope-config')
-require('nycrat.comment-config')
 require('nycrat.plugins')
 require('nycrat.colors')
-require('nycrat.presence-config')
-require('nycrat.neovide-config')
-require('nycrat.lualine-config')

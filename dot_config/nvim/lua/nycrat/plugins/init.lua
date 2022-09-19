@@ -12,6 +12,8 @@ require("packer").startup(function()
   use "rhysd/vim-clang-format"
   use "sbdchd/neoformat"
   use "tpope/vim-surround"
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   -- navigation
   use "preservim/nerdtree"
@@ -21,7 +23,7 @@ require("packer").startup(function()
   use "ryanoasis/vim-devicons"
   use "nvim-telescope/telescope.nvim"
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-  -- use "ThePrimeagen/harpoon" -- THIS PLUGIN JUST SO SLOW CURRENTLY
+  use "ThePrimeagen/harpoon" -- THIS PLUGIN JUST SO SLOW CURRENTLY
 
   -- git
   use "kdheepak/lazygit.nvim"
@@ -31,15 +33,16 @@ require("packer").startup(function()
     requires = { { "ldelossa/litee.nvim" } }
   }
 
+  -- writing
+  use "junegunn/goyo.vim"
+  use "preservim/vim-pencil"
+
   -- misc
-   use {
+  use {
       "ktunprasert/gui-font-resize.nvim",
       config = function() require("gui-font-resize").setup() end,
   }
   use "KabbAmine/vCoolor.vim"
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use 'nvim-treesitter/nvim-treesitter-context'
-
   use "mbbill/undotree"
   use {
     "nvim-lualine/lualine.nvim",
@@ -47,7 +50,6 @@ require("packer").startup(function()
   }
   use "lukas-reineke/indent-blankline.nvim"
   use "lewis6991/impatient.nvim"
-  use "andweeb/presence.nvim"
   use "norcalli/nvim-colorizer.lua"
   use {
     "lewis6991/spellsitter.nvim",
@@ -55,10 +57,8 @@ require("packer").startup(function()
       require("spellsitter").setup()
     end
   }
-
-  -- use "koenverburg/peepsight.nvim"
-  use "~/Repositories/MISC/peepsight.nvim"
   use "p00f/nvim-ts-rainbow"
+  -- use "andweeb/presence.nvim"
 
   -- color themes
   use "catppuccin/nvim"
@@ -69,3 +69,5 @@ require("packer").startup(function()
   use "folke/tokyonight.nvim"
 
 end)
+
+require('nycrat.plugins.misc-config')

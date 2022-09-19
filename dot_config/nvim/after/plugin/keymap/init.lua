@@ -4,8 +4,10 @@ local inoremap = Remap.inoremap
 local vnoremap = Remap.vnoremap
 local tnoremap = Remap.tnoremap
 
+local silent = { silent = true }
+
 -- easier to enter normal mode
-inoremap("jk", "<Esc>", { silent = true })
+inoremap("jk", "<Esc>")
 
 -- Movement
 nnoremap("<C-L>", "<C-W><C-L>")
@@ -26,37 +28,39 @@ nnoremap("N", "Nzzzv")
 -- nnoremap("<S-W>j", "<C-W>+")
 
 -- Moving Text
-vnoremap("J", ":m '>+1<CR>gv=gv", { silent = true })
-vnoremap("K", ":m '<-2<CR>gv=gv", { silent = true })
+vnoremap("J", ":m '>+1<CR>gv=gv", silent)
+vnoremap("K", ":m '<-2<CR>gv=gv", silent)
 
 -- Copy Paste
-vnoremap("<D-c>", "\"+y");
+vnoremap("<D-c>", "\"+y", silent);
 
-inoremap("<D-v>", "<C-o>\"+p");
-nnoremap("<D-v>", "\"+p");
-vnoremap("<D-v>", "\"+p");
+inoremap("<D-v>", "<C-o>\"+p", silent);
+nnoremap("<D-v>", "\"+p", silent);
+vnoremap("<D-v>", "\"+p", silent);
 
 -- built in terminal
-nnoremap("<nnoremap>t", ":sp<CR> :term<CR> :resize 20N<CR> i", { silent = true })
--- nnoremap("<Esc>", "<C-\\><C-n>", { silent = true })
-tnoremap("<C-q>", "<C-\\><C-n>", { silent = true })
+nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
+-- nnoremap("<Esc>", "<C-\\><C-n>", silent)
+tnoremap("<C-q>", "<C-\\><C-n>", silent)
 
 -- misc
 
 vnoremap("<leader>p", "\"_dP")
-nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", { silent = true })
-nnoremap("<leader>co", ":VCoolor<CR>", { silent = true })
+nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", silent)
+nnoremap("<leader>co", ":VCoolor<CR>", silent)
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-nnoremap("<leader>u", ":UndotreeToggle<CR>", { silent = true })
-nnoremap("<leader>gg", ":LazyGit<CR>", { silent = true })
+nnoremap("<leader>u", ":UndotreeToggle<CR>", silent)
+nnoremap("<leader>gg", ":LazyGit<CR>", silent)
 nnoremap('<leader>m', ":Neoformat<CR>")
 vnoremap('<leader>m', ":Neoformat<CR>")
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":q<CR>")
 
-nnoremap("<leader>e", ":Peepsight<CR>", { silent = true })
+nnoremap("<C-e>", ":Goyo<CR>", silent)
+nnoremap("<C-p>", ":PencilToggle<CR>")
+inoremap("<C-p>", "<Esc>:PencilToggle<CR>a")
 
-nnoremap("<C-->", ":GUIFontSizeChange -1<CR>", { silent = true })
-nnoremap("<C-=>", ":GUIFontSizeChange +1<CR>", { silent = true })
-inoremap("<C-->", "<Esc>:GUIFontSizeChange -1<CR>a", { silent = true })
-inoremap("<C-=>", "<Esc>:GUIFontSizeChange +1<CR>a", { silent = true })
+nnoremap("<D-->", ":GUIFontSizeChange -1<CR>", silent)
+nnoremap("<D-=>", ":GUIFontSizeChange +1<CR>", silent)
+inoremap("<D-->", "<Esc>:GUIFontSizeChange -1<CR>a", silent)
+inoremap("<D-=>", "<Esc>:GUIFontSizeChange +1<CR>a", silent)

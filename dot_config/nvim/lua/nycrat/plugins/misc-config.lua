@@ -1,12 +1,15 @@
+require('nycrat.plugins.colorizer-config')
+require('nycrat.plugins.comment-config')
+require('nycrat.plugins.goyo-config')
+require('nycrat.plugins.lualine-config')
+require('nycrat.plugins.neovide-config')
+require('nycrat.plugins.telescope-config')
+
 vim.g["NERDTreeWinPos"] = "right"
 vim.g["NERDTreeWinSize"] = 40
 vim.g["NERDTreeShowHidden"] = true
 vim.g["NERDTreeIgnore"] = {'.DS_Store$' }
 vim.g["NERDTreeMinimalUI"] = true
-
--- Start NERDTree when Vim starts with a directory argument.
--- vim.cmd[[autocmd StdinReadPre * let s:std_in=1]]
--- vim.cmd[[autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif]]
 
 vim.g["vcoolor_lowercase"] = true
 
@@ -20,33 +23,13 @@ require('nvim-treesitter.configs').setup {
   },
   indent = {
     enable = true,
-    disable = {"cpp"}
+    disable = {"cpp", "typescript", "typescriptreact", "rust"}
   }
 }
 
 vim.g["clang_format#detect_style_file)"] = 1
 
 vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
-
-require'colorizer'.setup()
-require 'colorizer'.setup({}, {
-  RRGGBBAA = true;        -- #RRGGBBAA hex codes
-  rgb_fn   = true;        -- CSS rgb() and rgba() functions
-  hsl_fn   = true;        -- CSS hsl() and hsla() functions
-  css      = true;        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-  css_fn   = true;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
-})
-
-require('peepsight').setup({
-  "function_declaration",
-  "method_declaration",
-  "func_literal",
-
-  -- typescript
-  "arrow_function",
-  "function_declaration",
-  "generator_function_declaration"
-})
 
 require("nvim-treesitter.configs").setup {
   highlight = {
@@ -62,3 +45,5 @@ require("nvim-treesitter.configs").setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
+
+-- vim.g["neoformat_rust_rustfmt"] = { args = "--edition 2021" }

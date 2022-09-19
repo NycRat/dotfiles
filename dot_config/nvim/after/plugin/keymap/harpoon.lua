@@ -1,16 +1,23 @@
---[[ local nnoremap = require("nycrat.keymap").nnoremap
+local nnoremap = require("nycrat.keymap").nnoremap
 
 local silent = { silent = true }
 
--- Terminal commands
--- ueoa is first through fourth finger left hand home row.
--- This just means I can crush, with opposite hand, the 4 terminal positions
---
--- These functions are stored in harpoon.  A plugn that I am developing
-nnoremap("<leader>a", function() require("harpoon.mark").add_file() end, silent)
-nnoremap("<C-e>", function() require("harpoon.ui").toggle_quick_menu() end, silent)
+require('harpoon').setup({
+  excluded_filetypes = {
+    "nerdtree",
+  },
+})
 
-nnoremap("<C-h>", function() require("harpoon.ui").nav_file(1) end, silent)
-nnoremap("<C-t>", function() require("harpoon.ui").nav_file(2) end, silent)
-nnoremap("<C-n>", function() require("harpoon.ui").nav_file(3) end, silent)
-nnoremap("<C-s>", function() require("harpoon.ui").nav_file(4) end, silent) ]]
+nnoremap("<leader>a", function() require("harpoon.mark").add_file() end, silent)
+nnoremap("<leader>e", function() require("harpoon.ui").toggle_quick_menu() end, silent)
+
+nnoremap("<leader>1", function() require("harpoon.ui").nav_file(1) end, silent)
+nnoremap("<leader>2", function() require("harpoon.ui").nav_file(2) end, silent)
+nnoremap("<leader>3", function() require("harpoon.ui").nav_file(3) end, silent)
+nnoremap("<leader>4", function() require("harpoon.ui").nav_file(4) end, silent)
+nnoremap("<leader>5", function() require("harpoon.ui").nav_file(5) end, silent)
+nnoremap("<leader>6", function() require("harpoon.ui").nav_file(6) end, silent)
+nnoremap("<leader>7", function() require("harpoon.ui").nav_file(7) end, silent)
+nnoremap("<leader>8", function() require("harpoon.ui").nav_file(8) end, silent)
+nnoremap("<leader>9", function() require("harpoon.ui").nav_file(9) end, silent)
+nnoremap("<leader>0", function() require("harpoon.ui").nav_file(10) end, silent)
