@@ -38,6 +38,7 @@ require("packer").startup(function()
   use "preservim/vim-pencil"
 
   -- misc
+  use "ThePrimeagen/vim-be-good"
   use {
       "ktunprasert/gui-font-resize.nvim",
       config = function() require("gui-font-resize").setup() end,

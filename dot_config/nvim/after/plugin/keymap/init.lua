@@ -43,22 +43,24 @@ nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
 tnoremap("<C-q>", "<C-\\><C-n>", silent)
 
--- misc
+-- writing
+nnoremap("<C-e>", ":Goyo<CR>", silent)
+nnoremap("<C-p>", ":PencilToggle<CR>")
+inoremap("<C-p>", "<Esc>:PencilToggle<CR>a")
 
-vnoremap("<leader>p", "\"_dP")
+-- plugins
 nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", silent)
 nnoremap("<leader>co", ":VCoolor<CR>", silent)
-nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 nnoremap("<leader>u", ":UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", ":LazyGit<CR>", silent)
 nnoremap('<leader>m', ":Neoformat<CR>")
 vnoremap('<leader>m', ":Neoformat<CR>")
+
+-- misc
+vnoremap("<leader>p", "\"_dP")
+nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":q<CR>")
-
-nnoremap("<C-e>", ":Goyo<CR>", silent)
-nnoremap("<C-p>", ":PencilToggle<CR>")
-inoremap("<C-p>", "<Esc>:PencilToggle<CR>a")
 
 nnoremap("<D-->", ":GUIFontSizeChange -1<CR>", silent)
 nnoremap("<D-=>", ":GUIFontSizeChange +1<CR>", silent)
