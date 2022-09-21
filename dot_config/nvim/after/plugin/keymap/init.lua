@@ -45,6 +45,7 @@ tnoremap("<C-q>", "<C-\\><C-n>", silent)
 
 -- writing
 nnoremap("<C-e>", ":Goyo<CR>", silent)
+inoremap("<C-e>", "<Esc>:Goyo<CR>a", silent)
 nnoremap("<C-p>", ":PencilToggle<CR>")
 inoremap("<C-p>", "<Esc>:PencilToggle<CR>a")
 

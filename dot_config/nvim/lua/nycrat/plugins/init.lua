@@ -18,6 +18,7 @@ require("packer").startup(function()
   -- navigation
   use "preservim/nerdtree"
   use "Xuyuanp/nerdtree-git-plugin"
+  use "PhilRunninger/nerdtree-visual-selection"
   use "ThePrimeagen/git-worktree.nvim"
   use "tiagofumo/vim-nerdtree-syntax-highlight"
   use "ryanoasis/vim-devicons"
