@@ -1,3 +1,5 @@
+vim.g["goyo_width"] = 90
+
 vim.api.nvim_command([[
   function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
@@ -8,6 +10,10 @@ vim.api.nvim_command([[
     set noshowcmd
     set scrolloff=999
     lua require('lualine').hide()
+
+    set number
+    set relativenumber
+    set numberwidth=4
 
     " ...
   endfunction
@@ -24,6 +30,8 @@ vim.api.nvim_command([[
     set showcmd
     set scrolloff=10
     lua require('lualine').hide({unhide=true})
+
+    set nonumber
 
     " ...
   endfunction

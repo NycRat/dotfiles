@@ -28,8 +28,11 @@ nnoremap("N", "Nzzzv")
 -- nnoremap("<S-W>j", "<C-W>+")
 
 -- Moving Text
-vnoremap("J", ":m '>+1<CR>gv=gv", silent)
-vnoremap("K", ":m '<-2<CR>gv=gv", silent)
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
+-- Stacking Text
+vnoremap("<D-j>", "J")
 
 -- Copy Paste
 vnoremap("<D-c>", "\"+y", silent);
