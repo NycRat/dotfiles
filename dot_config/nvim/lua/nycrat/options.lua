@@ -40,8 +40,6 @@ local options = {
   guifont = "MesloLGS NF:h18",
   -- guifont = "Seven Segment:h20",
   -- clipboard = "unnamedplus",
-
-  spell = true
 }
 
 vim.opt.shortmess:append "I" -- don't show default startup message

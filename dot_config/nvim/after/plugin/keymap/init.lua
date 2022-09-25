@@ -48,9 +48,14 @@ tnoremap("<C-q>", "<C-\\><C-n>", silent)
 
 -- writing
 nnoremap("<C-e>", ":Goyo<CR>", silent)
+nnoremap("<C-p>", ":PencilToggle<CR>:echo \"Pencil Toggled\"<CR>")
+nnoremap("<C-s>", ":set spell!<CR>", silent)
+
 inoremap("<C-e>", "<Esc>:Goyo<CR>a", silent)
-nnoremap("<C-p>", ":PencilToggle<CR>")
-inoremap("<C-p>", "<Esc>:PencilToggle<CR>a")
+inoremap("<C-p>", "<Esc>:PencilToggle<CR>:echo \"Pencil Toggled\"<CR>a")
+inoremap("<C-s>", "<Esc>:set spell!<CR>a", silent)
+
+  -- spell = true
 
 -- plugins
 nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", silent)

@@ -22,7 +22,7 @@ vim.g.ayucolor = "light"
 vim.g.catppuccin_flavour = "mocha"
 -- vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme ayu]]
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme tokyonight-night]]
 -- vim.cmd[[colorscheme gruvbox]]
 
 -- contrast in line numbers
