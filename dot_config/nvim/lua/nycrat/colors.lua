@@ -14,7 +14,7 @@ require("gruvbox").setup({
   contrast = "soft", -- can be "hard", "soft" or empty string
   overrides = {},
 })
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
 
 
 vim.g.tokyonight_style = "night"
@@ -22,8 +22,9 @@ vim.g.ayucolor = "light"
 vim.g.catppuccin_flavour = "mocha"
 -- vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme ayu]]
-vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme tokyonight-night]]
 -- vim.cmd[[colorscheme gruvbox]]
+vim.cmd('colorscheme rose-pine')
 
 -- contrast in line numbers
 vim.cmd[[highlight LineNr guifg=#d8d0cc]]

@@ -28,7 +28,7 @@ plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE=true
 
 # export LANG=en_US.UTF-8
 
@@ -49,6 +49,10 @@ export NVM_DIR="$HOME/.nvm"
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^n "nvim\n"
+# bindkey -s ^f "ta\n"
+
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
@@ -67,6 +71,8 @@ alias tn="tmux new -s"
 
 alias python="python3"
 alias py="python3"
+
+PATH="/Users/avah/.local/bin/:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
 

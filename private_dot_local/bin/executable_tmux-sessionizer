@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~/work/* ~/personal ~/personal/repositories/* ~/.config ~/school/* ~/school/*/* -mindepth 1 -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux) # IF HAS SERVER RUNNING
+
+if [[ -z $TMUX ]] || [[ -z $tmux_running ]]; then
+  if tmux has-session -t=$selected_name; then
+     tmux attach -t=$selected_name
+    exit 0
+  fi
+  tmux new-session -s $selected_name -c $selected
+  exit 0
+fi
+
+# ONLY RUNS IF ALREADY IN TMUX
+if ! tmux has-session -t=$selected_name; then
+  tmux new-session -ds $selected_name -c $selected
+fi
+
+tmux switch-client -t $selected_name

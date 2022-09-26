@@ -49,8 +49,8 @@ require("packer").startup(function()
   use("KabbAmine/vCoolor.vim")
   use("mbbill/undotree")
   use({"nvim-lualine/lualine.nvim",
-     requires = {"kyazdani42/nvim-web-devicons", opt = true} }
-  )
+    requires = {"kyazdani42/nvim-web-devicons", opt = true}
+  })
 
   use("lukas-reineke/indent-blankline.nvim")
   use("lewis6991/impatient.nvim")
@@ -73,7 +73,10 @@ require("packer").startup(function()
   use("ellisonleao/gruvbox.nvim")
   use("altercation/vim-colors-solarized")
   use("folke/tokyonight.nvim")
-
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+  })
 end)
 
 require('nycrat.plugins.misc-config')
