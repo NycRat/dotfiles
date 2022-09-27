@@ -50,15 +50,10 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^n "nvim\n"
+bindkey -s ^n "neovide --frame None --geometry=157x46\n"
 # bindkey -s ^f "ta\n"
 
-alias vim="nvim"
-alias vi="nvim"
-alias v="nvim"
 alias n="neovide --frame None --geometry=157x46"
-alias ne="n"
-alias neo="n"
 
 export EDITOR=nvim
 export editor=nvim

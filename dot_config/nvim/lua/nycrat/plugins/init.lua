@@ -68,13 +68,10 @@ require("packer").startup(function()
 
   -- color themes
   use("catppuccin/nvim")
-  use("ayu-theme/ayu-vim")
-  use("sainnhe/gruvbox-material")
   use("ellisonleao/gruvbox.nvim")
-  use("altercation/vim-colors-solarized")
   use("folke/tokyonight.nvim")
-  use({
-    'rose-pine/neovim',
+  use("rafamadriz/neon")
+  use({'rose-pine/neovim',
     as = 'rose-pine',
   })
 end)

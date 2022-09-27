@@ -55,8 +55,6 @@ inoremap("<C-e>", "<Esc>:Goyo<CR>a", silent)
 inoremap("<C-p>", "<Esc>:PencilToggle<CR>:echo \"Pencil Toggled\"<CR>a")
 inoremap("<C-s>", "<Esc>:set spell!<CR>a", silent)
 
-  -- spell = true
-
 -- plugins
 nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", silent)
 nnoremap("<leader>co", ":VCoolor<CR>", silent)
