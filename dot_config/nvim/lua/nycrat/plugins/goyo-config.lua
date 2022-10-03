@@ -31,7 +31,7 @@ vim.api.nvim_command([[
     set scrolloff=10
     lua require('lualine').hide({unhide=true})
 
-    set nonumber
+    " set nonumber
 
     " ...
   endfunction

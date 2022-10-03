@@ -19,11 +19,14 @@ require("packer").startup(function()
   use('nvim-treesitter/nvim-treesitter-context')
 
   -- navigation
-  use("preservim/nerdtree")
-  use("Xuyuanp/nerdtree-git-plugin")
-  use("PhilRunninger/nerdtree-visual-selection")
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   use("ThePrimeagen/git-worktree.nvim")
-  use("tiagofumo/vim-nerdtree-syntax-highlight")
   use("ryanoasis/vim-devicons")
   use("nvim-telescope/telescope.nvim")
   use({"nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -70,7 +73,6 @@ require("packer").startup(function()
   use("catppuccin/nvim")
   use("ellisonleao/gruvbox.nvim")
   use("folke/tokyonight.nvim")
-  use("rafamadriz/neon")
   use({'rose-pine/neovim',
     as = 'rose-pine',
   })

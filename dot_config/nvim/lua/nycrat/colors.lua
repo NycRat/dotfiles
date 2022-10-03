@@ -22,18 +22,14 @@
 -- vim.g.ayucolor = "light"
 -- vim.g.catppuccin_flavour = "mocha"
 
+require("tokyonight").setup({
+  style = "night",
+  -- transparent = true,
+})
 
-vim.g.neon_style = "doom"
-vim.g.neon_italic_keyword = true
-vim.g.neon_italic_boolean = true
-vim.g.neon_italic_function = true
-vim.g.neon_italic_variable = true
-vim.g.neon_bold = true
--- vim.g.neon_transparent = true
-
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme tokyonight]]
 
 
 -- contrast in line numbers
-vim.cmd[[highlight LineNr guifg=#d8d0cc]]
+vim.cmd[[highlight LineNr guifg=#beb8b8]]
 -- vim.cmd[[highlight LineNr guifg=#2c2c2c]]

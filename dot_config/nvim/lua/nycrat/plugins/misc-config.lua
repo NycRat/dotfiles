@@ -4,12 +4,7 @@ require('nycrat.plugins.goyo-config')
 require('nycrat.plugins.lualine-config')
 require('nycrat.plugins.neovide-config')
 require('nycrat.plugins.telescope-config')
-
-vim.g["NERDTreeWinPos"] = "right"
-vim.g["NERDTreeWinSize"] = 40
-vim.g["NERDTreeShowHidden"] = true
-vim.g["NERDTreeIgnore"] = {'.DS_Store$' }
-vim.g["NERDTreeMinimalUI"] = true
+require('nycrat.plugins.nvimtree-config')
 
 vim.g["vcoolor_lowercase"] = true
 

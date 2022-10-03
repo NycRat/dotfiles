@@ -20,6 +20,9 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
+vnoremap("n", [[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]], silent)
+-- vim.cmd[[vnoremap ml :<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>:<c-u>set hlsearch<CR>]]
+-- vnoremap("ml", ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@\",'/\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>")
 
 -- -- Resize Window
 -- nnoremap("<C-W>l", "<C-W>>")
@@ -56,7 +59,7 @@ inoremap("<C-p>", "<Esc>:PencilToggle<CR>:echo \"Pencil Toggled\"<CR>a")
 inoremap("<C-s>", "<Esc>:set spell!<CR>a", silent)
 
 -- plugins
-nnoremap("<leader><tab>", ":NERDTreeToggle<CR>", silent)
+nnoremap("<leader><tab>", ":NvimTreeToggle<CR> ", silent)
 nnoremap("<leader>co", ":VCoolor<CR>", silent)
 nnoremap("<leader>u", ":UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", ":LazyGit<CR>", silent)
