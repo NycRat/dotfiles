@@ -8,8 +8,13 @@ require('nycrat.plugins.nvimtree-config')
 
 vim.g["vcoolor_lowercase"] = true
 
-require('nvim-treesitter.configs').setup {
-  -- ensure_installed = "maintained", -- idk why error
+vim.g["clang_format#detect_style_file)"] = 1
+
+vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
+
+require('leap').add_default_mappings()
+
+require("nvim-treesitter.configs").setup {
   context_commentstring = {
     enable = true
   },
@@ -19,16 +24,6 @@ require('nvim-treesitter.configs').setup {
   indent = {
     enable = true,
     disable = {"cpp", "typescript", "typescriptreact", "rust"}
-  }
-}
-
-vim.g["clang_format#detect_style_file)"] = 1
-
-vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
-
-require("nvim-treesitter.configs").setup {
-  highlight = {
-      -- ...
   },
   -- ...
   rainbow = {
@@ -41,4 +36,4 @@ require("nvim-treesitter.configs").setup {
   }
 }
 
--- vim.g["neoformat_rust_rustfmt"] = { args = "--edition 2021" }
+-- vim.g["neoformat_rust_rustfmt"] = { args = {"--edition 2021"} }

@@ -1,6 +1,7 @@
 require("packer").startup(function()
   use("wbthomason/packer.nvim")
   use("nvim-lua/plenary.nvim")
+  use("tpope/vim-repeat")
 
   use("~/personal/repositories/MISC/todo.nvim")
   -- use("nycrat/todo.nvim")
@@ -15,8 +16,9 @@ require("packer").startup(function()
   use("rhysd/vim-clang-format")
   use("sbdchd/neoformat")
   use("tpope/vim-surround")
-  use( "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-  use('nvim-treesitter/nvim-treesitter-context')
+  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  use("nvim-treesitter/nvim-treesitter-context")
+  use("ggandor/leap.nvim")
 
   -- navigation
   use {
@@ -67,7 +69,6 @@ require("packer").startup(function()
   )
 
   use("p00f/nvim-ts-rainbow")
-  --(use "andweeb/presence.nvim")
 
   -- color themes
   use("catppuccin/nvim")

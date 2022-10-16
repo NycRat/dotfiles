@@ -6,7 +6,7 @@ local silent = { silent = true }
 
 require('harpoon').setup({
   excluded_filetypes = {
-    "nerdtree",
+    "NvimTree",
   },
 })
 

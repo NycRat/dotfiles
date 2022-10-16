@@ -22,7 +22,7 @@ require('lualine').setup({
   },
   options = {
     disabled_filetypes = {
-      'nerdtree'
+      'NvimTree'
     }
   }
 })

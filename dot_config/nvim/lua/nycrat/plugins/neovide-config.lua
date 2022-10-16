@@ -8,10 +8,10 @@ if vim.g.neovide  then
   vim.g.neovide_cursor_antialiasing = true
   vim.g.neovide_transparency = 1
   -- vim.g.neovide_profiler = true
-  vim.g.neovide_cursor_vfx_mode = "railgun"
-  vim.g.neovide_cursor_vfx_opacity = 200
-  vim.g.neovide_cursor_vfx_particle_density = 100
-  vim.g.neovide_cursor_vfx_particle_speed = 50
-  vim.g.neovide_cursor_vfx_particle_phase = 5
-  vim.g.neovide_cursor_vfx_particle_curl = 100
+  -- vim.g.neovide_cursor_vfx_mode = "railgun"
+  -- vim.g.neovide_cursor_vfx_opacity = 200
+  -- vim.g.neovide_cursor_vfx_particle_density = 100
+  -- vim.g.neovide_cursor_vfx_particle_speed = 50
+  -- vim.g.neovide_cursor_vfx_particle_phase = 5
+  -- vim.g.neovide_cursor_vfx_particle_curl = 100
 end
