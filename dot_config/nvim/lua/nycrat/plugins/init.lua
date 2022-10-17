@@ -15,10 +15,14 @@ require("packer").startup(function()
     use("MaxMEllon/vim-jsx-pretty")
     use("rhysd/vim-clang-format")
     use("sbdchd/neoformat")
-    -- use("tpope/vim-surround")
     use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
     use("nvim-treesitter/nvim-treesitter-context")
     use("ggandor/leap.nvim")
+    use({
+        "kylechui/nvim-surround",
+        tag = "*",
+        config = function() require("nvim-surround").setup({}) end
+    })
 
     -- navigation
     use {
@@ -70,6 +74,7 @@ require("packer").startup(function()
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
     use({'rose-pine/neovim', as = 'rose-pine'})
+    use("Everblush/everblush.nvim")
 end)
 
 require('nycrat.plugins.misc-config')

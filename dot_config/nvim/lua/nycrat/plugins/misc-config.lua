@@ -32,5 +32,3 @@ require("nvim-treesitter.configs").setup {
         -- termcolors = {} -- table of colour name strings
     }
 }
-
--- vim.g["neoformat_rust_rustfmt"] = { args = {"--edition 2021"} }
