@@ -26,7 +26,7 @@ require("telescope").setup {
             "--line-number", "--column", "--smart-case", "--hidden"
         },
         file_ignore_patterns = {
-            "node_modules", ".git", ".DS_Store", "target", "build", "*.o"
+            "node_modules/", ".git/", ".DS_Store$", "target/", "build/", ".o$"
         },
         -- file_ignore_patterns = {},
         winblend = 0,
