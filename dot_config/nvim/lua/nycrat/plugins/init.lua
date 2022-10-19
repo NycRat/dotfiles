@@ -3,8 +3,8 @@ require("packer").startup(function()
     use("nvim-lua/plenary.nvim")
     use("tpope/vim-repeat")
 
-    use("~/personal/repositories/MISC/todo.nvim")
-    -- use("nycrat/todo.nvim")
+    -- use("~/personal/repositories/MISC/todo.nvim")
+    use("nycrat/todo.nvim")
 
     -- easier coding
     use({"neoclide/coc.nvim", branch = "release"})
@@ -73,7 +73,9 @@ require("packer").startup(function()
     use("catppuccin/nvim")
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
-    use({'rose-pine/neovim', as = 'rose-pine'})
+    -- use({"rose-pine/neovim', as = 'rose-pine"})
+    -- use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
+    use({"nycrat/rose-pine", as = "rose-pine"})
     use("Everblush/everblush.nvim")
 end)
 

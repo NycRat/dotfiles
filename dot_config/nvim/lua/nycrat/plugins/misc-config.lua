@@ -17,7 +17,7 @@ require('leap').add_default_mappings()
 
 require("nvim-treesitter.configs").setup {
     context_commentstring = {enable = true},
-    highlight = {enable = true, disable = {"markdown"}},
+    highlight = {enable = true, disable = {}},
     indent = {
         enable = true,
         disable = {"cpp", "typescript", "typescriptreact", "rust"}

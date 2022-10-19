@@ -1,15 +1,12 @@
--- setup must be called before loading the colorscheme
---
-require("rose-pine").setup({
-  dark_variant = "main"
-})
--- vim.g.catppuccin_flavour = "mocha"
-require("tokyonight").setup({
-    style = "night"
-    -- transparent = true,
-})
+-- require("rose-pine").setup()
 
--- vim.cmd [[colorscheme tokyonight]]
+-- vim.g.catppuccin_flavour = "mocha"
+-- require("tokyonight").setup({
+--     style = "night"
+--     -- transparent = true,
+-- })
+
+-- vim.cmd [[colorscheme tokyonight-night]]
 vim.cmd [[colorscheme rose-pine]]
 
 -- contrast in line numbers
