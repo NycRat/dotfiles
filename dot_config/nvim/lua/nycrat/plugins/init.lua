@@ -54,7 +54,7 @@ require("packer").startup(function()
         config = function() require("gui-font-resize").setup() end
     })
 
-    use("KabbAmine/vCoolor.vim")
+    -- use("KabbAmine/vCoolor.vim")
     use("mbbill/undotree")
     use({
         "nvim-lualine/lualine.nvim",
@@ -63,7 +63,8 @@ require("packer").startup(function()
 
     use("lukas-reineke/indent-blankline.nvim")
     use("lewis6991/impatient.nvim")
-    use("norcalli/nvim-colorizer.lua")
+    -- use("norcalli/nvim-colorizer.lua")
+    use("uga-rosa/ccc.nvim")
     use("lewis6991/spellsitter.nvim",
         {config = function() require("spellsitter").setup() end})
 
@@ -74,8 +75,8 @@ require("packer").startup(function()
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
     -- use({"rose-pine/neovim', as = 'rose-pine"})
-    -- use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
-    use({"nycrat/rose-pine", as = "rose-pine"})
+    use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
+    -- use({"nycrat/rose-pine", as = "rose-pine"})
     use("Everblush/everblush.nvim")
 end)
 

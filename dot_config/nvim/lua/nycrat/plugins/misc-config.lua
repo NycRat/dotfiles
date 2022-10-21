@@ -1,4 +1,4 @@
-require('nycrat.plugins.colorizer-config')
+-- require('nycrat.plugins.ccc-config')
 require('nycrat.plugins.comment-config')
 require('nycrat.plugins.goyo-config')
 require('nycrat.plugins.lualine-config')
@@ -32,3 +32,7 @@ require("nvim-treesitter.configs").setup {
         -- termcolors = {} -- table of colour name strings
     }
 }
+
+require("ccc").setup()
+
+-- vim.cmd[[!ls]]

@@ -67,7 +67,9 @@ inoremap("<C-s>", "<Esc>:set spell!<CR>a", silent)
 
 -- plugins
 nnoremap("<leader><tab>", ":NvimTreeToggle<CR> ", silent)
-nnoremap("<leader>co", ":VCoolor<CR>", silent)
+nnoremap("<leader>co", ":CccPick<CR>", silent)
+nnoremap("<leader>cc", ":CccHighlighterToggle<CR>", silent)
+nnoremap("<leader>cv", ":CccConvert<CR>", silent)
 nnoremap("<leader>u", ":UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", ":LazyGit<CR>", silent)
 nnoremap('<leader>m', ":Neoformat<CR>")
