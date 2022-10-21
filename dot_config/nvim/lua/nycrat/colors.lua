@@ -1,11 +1,9 @@
 -- require("rose-pine").setup()
-
 -- vim.g.catppuccin_flavour = "mocha"
 -- require("tokyonight").setup({
 --     style = "night"
 --     -- transparent = true,
 -- })
-
 -- vim.cmd [[colorscheme tokyonight-night]]
 vim.cmd [[colorscheme rose-pine]]
 

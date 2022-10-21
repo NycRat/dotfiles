@@ -51,9 +51,9 @@ nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
 tnoremap("<C- >", "<C-\\><C-n>", silent)
 tnoremap("<D-v>", function()
-    local keys = vim.api.nvim_replace_termcodes("<C-\\><C-n>\"+pi", true, false,
-                                                true)
-    vim.api.nvim_feedkeys(keys, 'n', false)
+  local keys = vim.api.nvim_replace_termcodes("<C-\\><C-n>\"+pi", true, false,
+                                              true)
+  vim.api.nvim_feedkeys(keys, 'n', false)
 end, silent)
 
 -- writing
