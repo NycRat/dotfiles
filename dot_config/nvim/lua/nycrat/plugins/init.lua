@@ -67,8 +67,8 @@ require("packer").startup(function()
     use("uga-rosa/ccc.nvim")
     use("lewis6991/spellsitter.nvim",
         {config = function() require("spellsitter").setup() end})
-
     use("p00f/nvim-ts-rainbow")
+    use("nvim-pack/nvim-spectre")
 
     -- color themes
     use("catppuccin/nvim")

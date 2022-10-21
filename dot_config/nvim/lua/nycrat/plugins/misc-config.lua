@@ -35,4 +35,4 @@ require("nvim-treesitter.configs").setup {
 
 require("ccc").setup()
 
--- vim.cmd[[!ls]]
+require('spectre').setup()
