@@ -49,7 +49,12 @@ vnoremap("<D-v>", "\"+p", silent);
 -- built in terminal
 nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
-tnoremap("<C-q>", "<C-\\><C-n>", silent)
+tnoremap("<C- >", "<C-\\><C-n>", silent)
+tnoremap("<D-v>", function()
+    local keys = vim.api.nvim_replace_termcodes("<C-\\><C-n>\"+pi", true, false,
+                                                true)
+    vim.api.nvim_feedkeys(keys, 'n', false)
+end, silent)
 
 -- writing
 nnoremap("<C-e>", ":Goyo<CR>", silent)
@@ -80,3 +85,4 @@ inoremap("<D-->", "<Esc>:GUIFontSizeChange -1<CR>a", silent)
 inoremap("<D-=>", "<Esc>:GUIFontSizeChange +1<CR>a", silent)
 
 nnoremap("<leader><C-o>", ":!open %<CR><CR>", silent)
+nnoremap("<D-r>", ":Ha<CR>", silent)
