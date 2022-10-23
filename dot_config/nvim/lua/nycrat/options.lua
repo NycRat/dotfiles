@@ -39,7 +39,6 @@ local options = {
   title = true,
   -- titlestring = "%t - Wvim",
   guifont = "MesloLGS NF:h18"
-  -- guifont = "JetBrainsMono Nerd Font Mono:h18",
   -- clipboard = "unnamedplus",
 }
 

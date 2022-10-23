@@ -90,3 +90,21 @@ nnoremap("<leader><C-o>", ":!open %<CR><CR>", silent)
 nnoremap("<D-b>", ":Gcc<CR>", silent)
 nnoremap("<D-l>", ":Run<CR>", silent)
 nnoremap("<D-r>", ":Ha<CR>", silent)
+
+local fonts = {
+  "MesloLGS NF:h18", "Fixedsys Excelsior 3.01:h22",
+  "JetBrainsMono Nerd Font Mono:h18"
+}
+
+nnoremap("<leader>n", function()
+  print(fonts)
+  local selected = false
+  for _, font in pairs(fonts) do
+    if (selected) then
+      vim.opt["guifont"] = font
+      return
+    end
+    if (vim.api.nvim_get_option("guifont") == font) then selected = true end
+  end
+  vim.opt["guifont"] = fonts[1]
+end)
