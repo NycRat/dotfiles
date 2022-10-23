@@ -87,4 +87,6 @@ inoremap("<D-->", "<Esc>:GUIFontSizeChange -1<CR>a", silent)
 inoremap("<D-=>", "<Esc>:GUIFontSizeChange +1<CR>a", silent)
 
 nnoremap("<leader><C-o>", ":!open %<CR><CR>", silent)
+nnoremap("<D-b>", ":Gcc<CR>", silent)
+nnoremap("<D-l>", ":Run<CR>", silent)
 nnoremap("<D-r>", ":Ha<CR>", silent)
