@@ -92,38 +92,10 @@ nnoremap("<D-b>", ":Gcc<CR>", silent)
 nnoremap("<D-l>", ":Run<CR>", silent)
 nnoremap("<D-r>", ":Ha<CR>", silent)
 
-local numFonts = 5
+local fontIncrement = require("nycrat.fonts").fontIncrement
+local fontDecrement = require("nycrat.fonts").fontDecrement
 
-local fonts = {
-  "MesloLGS NF:h18", "Fixedsys Excelsior 3.01:h22",
-  "JetBrainsMono Nerd Font Mono:h18", "FantasqueSansMono Nerd Font Mono:h21",
-  "Operator Mono:h20"
-}
-
-nnoremap("<D-m>", function()
-  local selectedIndex = 1
-  local curFont = vim.api.nvim_get_option("guifont")
-  for i, font in pairs(fonts) do
-    if (curFont == font) then
-      selectedIndex = i + 1
-      break
-    end
-  end
-  if (selectedIndex > numFonts) then
-    selectedIndex = 1
-  end
-  vim.opt["guifont"] = fonts[selectedIndex]
-end)
-
-nnoremap("<D-n>", function()
-  local selectedIndex = numFonts
-  local curFont = vim.api.nvim_get_option("guifont")
-  for i, font in pairs(fonts) do
-    if (curFont == font) then
-      selectedIndex = i - 1
-      break
-    end
-  end
-  if (selectedIndex <= 0) then selectedIndex = numFonts end
-  vim.opt["guifont"] = fonts[selectedIndex]
-end)
+nnoremap("<D-m>", fontIncrement)
+nnoremap("<D-n>", fontDecrement)
+inoremap("<D-m>", fontIncrement)
+inoremap("<D-n>", fontDecrement)
