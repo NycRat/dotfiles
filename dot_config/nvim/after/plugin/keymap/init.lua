@@ -27,10 +27,10 @@ vnoremap("n",
 -- vnoremap("ml", ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@\",'/\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>")
 
 -- -- Resize Window
--- nnoremap("<C-W>l", "<C-W>>")
--- nnoremap("<C-W>h", "<C-W><")
--- nnoremap("<C-W>k", "<C-W>-")
--- nnoremap("<S-W>j", "<C-W>+")
+nnoremap("<C-]>", "2<C-W>>")
+nnoremap("<C-[>", "2<C-W><")
+-- nnoremap("<C- >k", "5<C-W>-")
+-- nnoremap("<C- >j", "5<C-W>+")
 
 -- Moving Text
 vnoremap("J", ":m '>+1<CR>gv=gv", silent)
@@ -76,7 +76,8 @@ nnoremap('<leader>m', ":Neoformat<CR>")
 vnoremap('<leader>m', ":Neoformat<CR>")
 
 -- misc
-vnoremap("<leader>p", "\"_dP")
+vnoremap("<leader>p", "\"_dp")
+vnoremap("<leader>P", "\"_dP")
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":q<CR>")
