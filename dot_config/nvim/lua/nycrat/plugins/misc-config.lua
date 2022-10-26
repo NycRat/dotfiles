@@ -7,6 +7,14 @@ require('nycrat.plugins.telescope-config')
 require('nycrat.plugins.nvimtree-config')
 require('nycrat.plugins.gh-config')
 
+require("font-swap").setup({
+  fonts = {
+    "MesloLGS NF:h18", -- "Fixedsys Excelsior 3.01:h22",
+    "FixedsysExcelsiorIIIb Nerd Font:h22", "JetBrainsMono Nerd Font Mono:h18",
+    "FantasqueSansMono Nerd Font Mono:h21", "OperatorMono Nerd Font:h20"
+  }
+})
+
 vim.g["vcoolor_lowercase"] = true
 
 vim.g["clang_format#detect_style_file)"] = 1

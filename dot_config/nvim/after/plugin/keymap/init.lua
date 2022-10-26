@@ -27,8 +27,8 @@ vnoremap("n",
 -- vnoremap("ml", ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@\",'/\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>")
 
 -- -- Resize Window
-nnoremap("<C-]>", "2<C-W>>")
-nnoremap("<C-[>", "2<C-W><")
+nnoremap("<D-]>", "2<C-W>>")
+nnoremap("<D-[>", "2<C-W><")
 -- nnoremap("<C- >k", "5<C-W>-")
 -- nnoremap("<C- >j", "5<C-W>+")
 
@@ -92,10 +92,7 @@ nnoremap("<D-b>", ":Gcc<CR>", silent)
 nnoremap("<D-l>", ":Run<CR>", silent)
 nnoremap("<D-r>", ":Ha<CR>", silent)
 
-local fontIncrement = require("nycrat.fonts").fontIncrement
-local fontDecrement = require("nycrat.fonts").fontDecrement
-
-nnoremap("<D-m>", fontIncrement)
-nnoremap("<D-n>", fontDecrement)
-inoremap("<D-m>", fontIncrement)
-inoremap("<D-n>", fontDecrement)
+nnoremap("<D-m>", "<Cmd>FontIndexIncrement<CR>")
+nnoremap("<D-n>", "<Cmd>FontIndexDecrement<CR>")
+inoremap("<D-m>", "<Cmd>FontIndexIncrement<CR>")
+inoremap("<D-n>", "<Cmd>FontIndexDecrement<CR>")

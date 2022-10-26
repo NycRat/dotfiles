@@ -5,6 +5,7 @@ require("packer").startup(function()
 
   -- use("~/personal/repositories/MISC/todo.nvim")
   use("nycrat/todo.nvim")
+  use("~/personal/repositories/MISC/gui-fonts.nvim")
 
   -- easier coding
   use({"neoclide/coc.nvim", branch = "release"})
@@ -35,8 +36,7 @@ require("packer").startup(function()
   use("ThePrimeagen/git-worktree.nvim")
   use("ryanoasis/vim-devicons")
   use("nvim-telescope/telescope.nvim")
-  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
-  use("ThePrimeagen/harpoon")
+  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) use("ThePrimeagen/harpoon")
 
   -- git
   use("kdheepak/lazygit.nvim")
@@ -51,7 +51,9 @@ require("packer").startup(function()
   use("ThePrimeagen/vim-be-good")
   use({
     "ktunprasert/gui-font-resize.nvim",
-    config = function() require("gui-font-resize").setup() end
+    config = function() require("gui-font-resize").setup({bounds = {
+      maximum = 40
+    }}) end
   })
 
   -- use("KabbAmine/vCoolor.vim")
