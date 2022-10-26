@@ -49,12 +49,6 @@ require("packer").startup(function()
 
   -- misc
   use("ThePrimeagen/vim-be-good")
-  use({
-    "ktunprasert/gui-font-resize.nvim",
-    config = function() require("gui-font-resize").setup({bounds = {
-      maximum = 40
-    }}) end
-  })
 
   -- use("KabbAmine/vCoolor.vim")
   use("mbbill/undotree")

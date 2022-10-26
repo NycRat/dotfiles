@@ -8,7 +8,7 @@ nnoremap("<leader>fi", "<Plug>(coc-implementation)", {silent = true})
 nnoremap("<leader>fr", "<Plug>(coc-references)", {silent = true})
 nnoremap("<leader>ff", "<Plug>(coc-definition)", {silent = true})
 
-nnoremap("K", ":call CocActionAsync('doHover')<CR>", {silent = true})
+nnoremap("K", "<Cmd>call CocActionAsync('doHover')<CR>", {silent = true})
 
 inoremap("<C-Space>", "coc#refresh()", {silent = true, expr = true})
 

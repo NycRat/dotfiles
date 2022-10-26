@@ -33,8 +33,8 @@ nnoremap("<D-[>", "2<C-W><")
 -- nnoremap("<C- >j", "5<C-W>+")
 
 -- Moving Text
-vnoremap("J", ":m '>+1<CR>gv=gv", silent)
-vnoremap("K", ":m '<-2<CR>gv=gv", silent)
+vnoremap("J", "<Cmd>m '>+1<CR>gv=gv", silent)
+vnoremap("K", "<Cmd>m '<-2<CR>gv=gv", silent)
 
 -- Stacking Text
 vnoremap("<D-j>", "J")
@@ -47,7 +47,7 @@ nnoremap("<D-v>", "\"+p", silent);
 vnoremap("<D-v>", "\"+p", silent);
 
 -- built in terminal
-nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
+nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
 tnoremap("<C- >", "<C-\\><C-n>", silent)
 tnoremap("<D-v>", function()
@@ -57,40 +57,40 @@ tnoremap("<D-v>", function()
 end, silent)
 
 -- writing
-nnoremap("<C-e>", ":Goyo<CR>", silent)
-nnoremap("<C-p>", ":PencilToggle<CR>:echo \"Pencil Toggled\"<CR>")
-nnoremap("<C-s>", ":set spell!<CR>", silent)
+nnoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
+nnoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
+nnoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
-inoremap("<C-e>", "<Esc>:Goyo<CR>a", silent)
-inoremap("<C-p>", "<Esc>:PencilToggle<CR>:echo \"Pencil Toggled\"<CR>a")
-inoremap("<C-s>", "<Esc>:set spell!<CR>a", silent)
+inoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
+inoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
+inoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- plugins
-nnoremap("<leader><tab>", ":NvimTreeToggle<CR> ", silent)
-nnoremap("<leader>co", ":CccPick<CR>", silent)
-nnoremap("<leader>cc", ":CccHighlighterToggle<CR>", silent)
-nnoremap("<leader>cv", ":CccConvert<CR>", silent)
-nnoremap("<leader>u", ":UndotreeToggle<CR>", silent)
-nnoremap("<leader>gg", ":LazyGit<CR>", silent)
-nnoremap('<leader>m', ":Neoformat<CR>")
-vnoremap('<leader>m', ":Neoformat<CR>")
+nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR> ", silent)
+nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
+nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
+nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
+nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
+nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
+nnoremap('<leader>m', "<Cmd>Neoformat<CR>")
+vnoremap('<leader>m', "<Cmd>Neoformat<CR>")
 
 -- misc
 vnoremap("<leader>p", "\"_dp")
 vnoremap("<leader>P", "\"_dP")
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-nnoremap("<leader>w", ":w<CR>")
-nnoremap("<leader>q", ":q<CR>")
+nnoremap("<leader>w", "<Cmd>w<CR>")
+nnoremap("<leader>q", "<Cmd>q<CR>")
 
-nnoremap("<D-->", ":GUIFontSizeChange -1<CR>", silent)
-nnoremap("<D-=>", ":GUIFontSizeChange +1<CR>", silent)
-inoremap("<D-->", "<Esc>:GUIFontSizeChange -1<CR>a", silent)
-inoremap("<D-=>", "<Esc>:GUIFontSizeChange +1<CR>a", silent)
+nnoremap("<D-->", "<Cmd>FontSizeDecrement<CR>", silent)
+nnoremap("<D-=>", "<Cmd>FontSizeIncrement<CR>", silent)
+inoremap("<D-->", "<Cmd>FontSizeDecrement<CR>", silent)
+inoremap("<D-=>", "<Cmd>FontSizeIncrement<CR>", silent)
 
-nnoremap("<leader><C-o>", ":!open %<CR><CR>", silent)
-nnoremap("<D-b>", ":Gcc<CR>", silent)
-nnoremap("<D-l>", ":Run<CR>", silent)
-nnoremap("<D-r>", ":Ha<CR>", silent)
+nnoremap("<leader><C-o>", "<Cmd>!open %<CR><CR>", silent)
+nnoremap("<D-b>", "<Cmd>Gcc<CR>", silent)
+nnoremap("<D-l>", "<Cmd>Run<CR>", silent)
+nnoremap("<D-r>", "<Cmd>Ha<CR>", silent)
 
 nnoremap("<D-m>", "<Cmd>FontIndexIncrement<CR>")
 nnoremap("<D-n>", "<Cmd>FontIndexDecrement<CR>")
