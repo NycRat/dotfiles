@@ -2,6 +2,8 @@ require("packer").startup(function()
   use("wbthomason/packer.nvim")
   use("nvim-lua/plenary.nvim")
   use("tpope/vim-repeat")
+  use("ryanoasis/vim-devicons")
+  use("nvim-tree/nvim-web-devicons")
 
   -- use("~/personal/repositories/MISC/todo.nvim")
   use("nycrat/todo.nvim")
@@ -27,16 +29,14 @@ require("packer").startup(function()
 
   -- navigation
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons' -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    "kyazdani42/nvim-tree.lua",
+    requires = {"nvim-tree/nvim-web-devicons"},
+    tag = "nightly" -- optional, updated every week. (see issue #1193)
   }
   use("ThePrimeagen/git-worktree.nvim")
-  use("ryanoasis/vim-devicons")
   use("nvim-telescope/telescope.nvim")
-  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) use("ThePrimeagen/harpoon")
+  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
+  use("ThePrimeagen/harpoon")
 
   -- git
   use("kdheepak/lazygit.nvim")
@@ -70,10 +70,10 @@ require("packer").startup(function()
   use("catppuccin/nvim")
   use("ellisonleao/gruvbox.nvim")
   use("folke/tokyonight.nvim")
-  -- use({"rose-pine/neovim', as = 'rose-pine"})
+  -- use({"rose-pine/neovim", as = "rose-pine"})
   use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
   -- use({"nycrat/rose-pine", as = "rose-pine"})
   use("Everblush/everblush.nvim")
 end)
 
-require('nycrat.plugins.misc-config')
+require("nycrat.plugins.misc-config")

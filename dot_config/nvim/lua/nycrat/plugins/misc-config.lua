@@ -10,8 +10,9 @@ require('nycrat.plugins.gh-config')
 require("font-swap").setup({
   fonts = {
     "MesloLGS NF:h18", -- "Fixedsys Excelsior 3.01:h22",
-    "FixedsysExcelsiorIIIb Nerd Font:h22", "JetBrainsMono Nerd Font Mono:h18",
-    "FantasqueSansMono Nerd Font Mono:h21", "OperatorMono Nerd Font:h20"
+    "FixedsysExcelsiorIIIb Nerd Font:h22", "SyneMono Nerd Font:h20",
+    "JetBrainsMono Nerd Font Mono:h18", "FantasqueSansMono Nerd Font Mono:h21",
+    "OperatorMono Nerd Font:h20"
   }
 })
 
