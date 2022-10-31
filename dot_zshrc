@@ -53,7 +53,8 @@ bindkey -s ^f "^utmux-sessionizer\n"
 bindkey -s ^n "^uneovide --frame None --geometry=157x46\n"
 # bindkey -s ^f "ta\n"
 
-alias n="neovide --frame None --geometry=157x46"
+alias neo="neovide --frame None --geometry=157x46"
+alias n="nvim"
 
 export EDITOR=nvim
 export editor=nvim
