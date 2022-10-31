@@ -81,16 +81,18 @@ vnoremap("<leader>P", "\"_dP")
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 nnoremap("<leader>w", "<Cmd>w<CR>")
 nnoremap("<leader>q", "<Cmd>q<CR>")
+nnoremap("<leader><C-o>", "<Cmd>!open %<CR><CR>", silent)
 
+-- C++ competitive programming
+nnoremap("<leader>cb", "<Cmd>Gcc<CR>", silent)
+nnoremap("<leader>cl", "<Cmd>Run<CR>", silent)
+nnoremap("<leader>cr", "<Cmd>Ha<CR>", silent)
+
+-- gui only
 nnoremap("<D-->", "<Cmd>FontSizeDecrement<CR>", silent)
 nnoremap("<D-=>", "<Cmd>FontSizeIncrement<CR>", silent)
 inoremap("<D-->", "<Cmd>FontSizeDecrement<CR>", silent)
 inoremap("<D-=>", "<Cmd>FontSizeIncrement<CR>", silent)
-
-nnoremap("<leader><C-o>", "<Cmd>!open %<CR><CR>", silent)
-nnoremap("<D-b>", "<Cmd>Gcc<CR>", silent)
-nnoremap("<D-l>", "<Cmd>Run<CR>", silent)
-nnoremap("<D-r>", "<Cmd>Ha<CR>", silent)
 
 nnoremap("<D-m>", "<Cmd>FontIndexIncrement<CR>")
 nnoremap("<D-n>", "<Cmd>FontIndexDecrement<CR>")
