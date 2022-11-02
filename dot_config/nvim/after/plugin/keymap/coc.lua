@@ -10,7 +10,7 @@ nnoremap("<leader>ff", "<Plug>(coc-definition)", {silent = true})
 
 nnoremap("K", "<Cmd>call CocActionAsync('doHover')<CR>", {silent = true})
 
-inoremap("<C-Space>", "coc#refresh()", {silent = true, expr = true})
+inoremap("<C-l>", "coc#refresh()", {silent = true, expr = true})
 
 -- Autocomplete
 -- TODO make the tabbing fill in first option
