@@ -25,10 +25,7 @@ vim.g["neoformat_lua_luaformat"] = {
   args = {"--indent-width=2"}
 }
 
-vim.g["neoformat_text_txtformat"] = {
-  exe = "txt-format",
-  args = {}
-}
+vim.g["neoformat_text_txtformat"] = {exe = "txt-format", args = {}}
 
 vim.g["neoformat_enabled_lua"] = {"luaformat"}
 vim.g["neoformat_enabled_text"] = {"txtformat"}
@@ -39,7 +36,7 @@ require('leap').add_default_mappings()
 
 require("nvim-treesitter.configs").setup {
   context_commentstring = {enable = true},
-  highlight = {enable = true, disable = {}},
+  highlight = {enable = true, disable = {"markdown"}},
   indent = {
     enable = true,
     disable = {"cpp", "typescript", "typescriptreact", "rust"}
