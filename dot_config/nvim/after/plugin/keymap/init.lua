@@ -32,9 +32,9 @@ nnoremap("<D-[>", "2<C-W><")
 -- nnoremap("<C- >k", "5<C-W>-")
 -- nnoremap("<C- >j", "5<C-W>+")
 
--- Moving Text
-vnoremap("J", "<Cmd>m '>+1<CR>gv=gv", silent)
-vnoremap("K", "<Cmd>m '<-2<CR>gv=gv", silent)
+-- Moving Text (who actually uses this)
+-- vnoremap("J", "<Cmd>m '>+1<CR>gv=gv", silent)
+-- vnoremap("K", "<Cmd>m '<-2<CR>gv=gv", silent)
 
 -- Stacking Text
 vnoremap("<D-j>", "J")
@@ -49,7 +49,7 @@ vnoremap("<D-v>", "\"+p", silent);
 -- built in terminal
 nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
-tnoremap("<C- >", "<C-\\><C-n>", silent)
+tnoremap("<C-c><C-c>", "<C-\\><C-n>", silent)
 tnoremap("<D-v>", function()
   local keys = vim.api.nvim_replace_termcodes("<C-\\><C-n>\"+pi", true, false,
                                               true)

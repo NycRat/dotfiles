@@ -25,7 +25,13 @@ vim.g["neoformat_lua_luaformat"] = {
   args = {"--indent-width=2"}
 }
 
+vim.g["neoformat_text_txtformat"] = {
+  exe = "txt-format",
+  args = {}
+}
+
 vim.g["neoformat_enabled_lua"] = {"luaformat"}
+vim.g["neoformat_enabled_text"] = {"txtformat"}
 
 vim.g["indentLine_fileTypeExclude"] = {"dashboard"}
 

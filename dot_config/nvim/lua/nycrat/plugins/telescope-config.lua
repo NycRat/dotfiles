@@ -8,7 +8,7 @@ require("telescope").setup {
     sorting_strategy = "descending",
     layout_strategy = "horizontal",
     layout_config = {
-      width = 0.75,
+      width = 0.85,
       preview_cutoff = 120,
       horizontal = {
         preview_width = function(_, cols, _)
@@ -24,9 +24,8 @@ require("telescope").setup {
       "--column", "--smart-case", "--hidden"
     },
     file_ignore_patterns = {
-      "node_modules/", ".git/", ".DS_Store$", "target/", "build/", ".o$"
+      "node_modules/", "%.git/", "%.DS_Store$", "target/", "build/", "%.o$"
     },
-    -- file_ignore_patterns = {},
     winblend = 0,
     border = {},
     borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
