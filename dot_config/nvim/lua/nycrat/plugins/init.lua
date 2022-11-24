@@ -9,9 +9,21 @@ require("packer").startup(function()
   use("nycrat/todo.nvim")
   use("~/personal/repositories/MISC/gui-fonts.nvim")
 
+  -- LSP
+  -- use("neovim/nvim-lspconfig")
+  -- use("hrsh7th/cmp-nvim-lsp")
+  -- use("hrsh7th/cmp-buffer")
+  -- use("hrsh7th/cmp-path")
+  -- use("hrsh7th/cmp-cmdline")
+  -- use("hrsh7th/nvim-cmp")
+  -- use("onsails/lspkind-nvim")
+  -- use("nvim-lua/lsp_extensions.nvim")
+  -- use("glepnir/lspsaga.nvim")
+  -- use("simrat39/symbols-outline.nvim")
+
   -- easier coding
   use({"neoclide/coc.nvim", branch = "release"})
-  use({"prettier/vim-prettier", run = "yarn install"})
+  -- use({"prettier/vim-prettier", run = "yarn install"})
   use("numToStr/Comment.nvim")
   use("jiangmiao/auto-pairs")
   use("JoosepAlviste/nvim-ts-context-commentstring")
@@ -40,7 +52,7 @@ require("packer").startup(function()
 
   -- git
   use("kdheepak/lazygit.nvim")
-  use("airblade/vim-gitgutter")
+  -- use("airblade/vim-gitgutter")
   use({"ldelossa/gh.nvim", requires = {{"ldelossa/litee.nvim"}}})
 
   -- writing
@@ -61,6 +73,7 @@ require("packer").startup(function()
   use("lewis6991/impatient.nvim")
   -- use("norcalli/nvim-colorizer.lua")
   use("uga-rosa/ccc.nvim")
+
   use("lewis6991/spellsitter.nvim",
       {config = function() require("spellsitter").setup() end})
   use("p00f/nvim-ts-rainbow")

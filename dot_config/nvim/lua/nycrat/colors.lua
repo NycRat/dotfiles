@@ -5,7 +5,7 @@
 --     -- transparent = true,
 -- })
 -- vim.cmd [[colorscheme tokyonight-night]]
-vim.cmd [[colorscheme rose-pine]]
+vim.cmd[[colorscheme rose-pine]]
 
 -- contrast in line numbers
 -- vim.cmd [[highlight LineNr guifg=#beb8b8]]

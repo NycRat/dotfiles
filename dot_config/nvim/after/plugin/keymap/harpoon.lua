@@ -1,6 +1,5 @@
 local Remap = require("nycrat.keymap")
 local nnoremap = Remap.nnoremap
-local inoremap = Remap.inoremap
 
 local silent = {silent = true}
 

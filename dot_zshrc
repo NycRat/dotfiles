@@ -68,7 +68,7 @@ alias tn="tmux new -s"
 alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
-alias tree="exa -T --icons"
+alias tree="exa -T --icons --git-ignore"
 
 alias python="python3"
 alias py="python3"

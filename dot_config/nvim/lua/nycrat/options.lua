@@ -45,4 +45,3 @@ local options = {
 vim.opt.shortmess:append("I") -- don't show default startup message
 
 for option, value in pairs(options) do vim.opt[option] = value end
-

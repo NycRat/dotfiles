@@ -30,3 +30,7 @@ vim.api.nvim_create_user_command("Ha", function()
   vim.cmd [[Build]]
   vim.cmd [[Run]]
 end, {})
+
+vim.api.nvim_create_user_command("Config", function()
+  vim.cmd [[cd ~/.config/nvim]]
+end, {})
