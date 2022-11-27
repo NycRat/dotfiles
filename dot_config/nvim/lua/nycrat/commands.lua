@@ -1,6 +1,6 @@
 local build_commands = {
-  c = "!g++ -std=c++17 -o %:p:r.o %",
-  cpp = "!g++ -std=c++17 -o %:p:r.o %",
+  c = "g++ -std=c++17 -o %:p:r.o %",
+  cpp = "g++ -std=c++17 -o %:p:r.o %",
   rust = "cargo build --release",
   go = "go build -o %:p:r.o %"
 }

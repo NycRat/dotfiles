@@ -52,7 +52,7 @@ require("packer").startup(function()
 
   -- git
   use("kdheepak/lazygit.nvim")
-  -- use("airblade/vim-gitgutter")
+  use("airblade/vim-gitgutter")
   use({"ldelossa/gh.nvim", requires = {{"ldelossa/litee.nvim"}}})
 
   -- writing

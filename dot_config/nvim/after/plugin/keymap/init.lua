@@ -73,7 +73,7 @@ nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
 nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
 nnoremap('<leader>m', "<Cmd>Neoformat<CR>")
-vnoremap('<leader>m', "<Cmd>Neoformat<CR>")
+vnoremap('<leader>m', ":Neoformat<CR>")
 
 -- misc
 vnoremap("<leader>p", "\"_dp")
