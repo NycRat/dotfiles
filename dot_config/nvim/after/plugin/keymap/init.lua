@@ -40,11 +40,14 @@ nnoremap("<D-[>", "2<C-W><")
 vnoremap("<D-j>", "J")
 
 -- Copy Paste
-vnoremap("<D-c>", "\"+y", silent);
+vnoremap("<leader>y", "\"+y", silent)
 
-inoremap("<D-v>", "<C-o>\"+p", silent);
-nnoremap("<D-v>", "\"+p", silent);
-vnoremap("<D-v>", "\"+p", silent);
+-- Neovide Copy Paste
+vnoremap("<D-c>", "\"+y", silent)
+
+inoremap("<D-v>", "<C-o>\"+p", silent)
+nnoremap("<D-v>", "\"+p", silent)
+vnoremap("<D-v>", "\"+p", silent)
 
 -- built in terminal
 nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)

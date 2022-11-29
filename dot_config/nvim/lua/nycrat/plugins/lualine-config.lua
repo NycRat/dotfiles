@@ -17,6 +17,7 @@ local function getGuiFont()
 end
 
 require('lualine').setup({
-  sections = {lualine_c = {"filename", {getWords}}, lualine_x = {{getGuiFont}, 'filetype'}},
+  -- sections = {lualine_c = {"filename", {getWords}}, lualine_x = {{getGuiFont}, 'filetype'}},
+  sections = {lualine_c = {"filename", {getWords}}},
   options = {disabled_filetypes = {'NvimTree'}}
 })

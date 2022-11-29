@@ -50,10 +50,10 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 bindkey -s ^f "^utmux-sessionizer\n"
-bindkey -s ^n "^uneovide --frame None --geometry=157x46\n"
+bindkey -s ^n "^uneovide --frame none --geometry=157x46\n"
 # bindkey -s ^f "ta\n"
 
-alias neo="neovide --frame None --geometry=157x46"
+alias neo="neovide --frame none --geometry=157x46"
 alias n="nvim"
 
 export EDITOR=nvim
@@ -76,5 +76,6 @@ alias py="python3"
 PATH="/Users/avah/.local/bin/:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
+export NVIM_COC_LOG_LEVEL=debug
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -8,16 +8,18 @@
   "dialog.rounded": true,
   "languageserver": {
     "arduino": {
-      "command": "~/.local/bin/arduino-language-server",
+      "command": "arduino-language-server",
       "rootPatterns": ["*.ino"],
       "filetypes": ["arduino"],
       "args": [
-        "-cli",
-        "/opt/homebrew/bin/arduino-cli",
         "-clangd",
         "/usr/bin/clangd",
+        "-cli",
+        "/opt/homebrew/bin/arduino-cli",
         "-cli-config",
-        "~/Library/Arduino15/arduino-cli.yaml"
+        "/Users/avah/Library/Arduino15/arduino-cli.yaml",
+        "-fqbn",
+        "arduino:avr:uno",
       ]
     }
   }
