@@ -14,20 +14,12 @@ nnoremap("K", "<Cmd>call CocActionAsync('doHover')<CR>", {silent = true})
 
 inoremap("<C-l>", "coc#refresh()", {silent = true, expr = true})
 
--- Autocomplete
--- TODO make the tabbing fill in first option
--- inoremap("<TAB>", "coc#pum#visible() ? coc#pum#next(1) : '<TAB>'", { expr = true })
--- inoremap("<S-TAB>", "coc#pum#visible() ? coc#pum#prev(1) : '<C-h>'", { expr = true })
--- inoremap("<CR>", "coc#pum#visible() ? coc#_select_confirm() : '<CR>'", { expr = true })
+-- vim.cmd [[
+-- inoremap <silent><expr> <TAB>
+-- \ coc#pum#visible() ? coc#pum#next(1) :
+-- \ "\<Tab>"
 
--- idk why neovim 8 just broke this
-
-vim.cmd [[
-inoremap <silent><expr> <TAB>
-\ coc#pum#visible() ? coc#pum#next(1) :
-\ "\<Tab>"
-
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-]]
+-- inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+-- inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+-- \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+-- ]]

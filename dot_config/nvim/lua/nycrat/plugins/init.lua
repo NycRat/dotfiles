@@ -61,6 +61,7 @@ require("packer").startup(function()
 
   -- misc
   use("ThePrimeagen/vim-be-good")
+  use("Eandrju/cellular-automaton.nvim")
 
   -- use("KabbAmine/vCoolor.vim")
   use("mbbill/undotree")

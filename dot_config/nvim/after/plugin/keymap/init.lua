@@ -61,11 +61,11 @@ end, silent)
 
 -- writing
 nnoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
-nnoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
+-- nnoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
 nnoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 inoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
-inoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
+-- inoremap("<C-p>", "<Cmd>PencilToggle<CR><Cmd>echo \"Pencil Toggled\"<CR>")
 inoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- plugins
@@ -77,6 +77,7 @@ nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
 nnoremap('<leader>m', "<Cmd>Neoformat<CR>")
 vnoremap('<leader>m', ":Neoformat<CR>")
+nnoremap('<leader>cm', "<Cmd>CellularAutomaton make_it_rain<CR>")
 
 -- misc
 vnoremap("<leader>p", "\"_dp")
