@@ -9,18 +9,6 @@ require("packer").startup(function()
   use("nycrat/todo.nvim")
   use("~/personal/repositories/MISC/gui-fonts.nvim")
 
-  -- LSP
-  -- use("neovim/nvim-lspconfig")
-  -- use("hrsh7th/cmp-nvim-lsp")
-  -- use("hrsh7th/cmp-buffer")
-  -- use("hrsh7th/cmp-path")
-  -- use("hrsh7th/cmp-cmdline")
-  -- use("hrsh7th/nvim-cmp")
-  -- use("onsails/lspkind-nvim")
-  -- use("nvim-lua/lsp_extensions.nvim")
-  -- use("glepnir/lspsaga.nvim")
-  -- use("simrat39/symbols-outline.nvim")
-
   -- easier coding
   use({"neoclide/coc.nvim", branch = "release"})
   -- use({"prettier/vim-prettier", run = "yarn install"})
@@ -90,4 +78,4 @@ require("packer").startup(function()
   use("Everblush/everblush.nvim")
 end)
 
-require("nycrat.plugins.misc-config")
+-- require("nycrat.plugins.misc-config")

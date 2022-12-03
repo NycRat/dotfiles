@@ -1,11 +1,11 @@
 -- require('nycrat.plugins.ccc-config')
-require('nycrat.plugins.comment-config')
-require('nycrat.plugins.goyo-config')
-require('nycrat.plugins.lualine-config')
-require('nycrat.plugins.neovide-config')
-require('nycrat.plugins.telescope-config')
-require('nycrat.plugins.nvimtree-config')
-require('nycrat.plugins.gh-config')
+-- require('nycrat.plugins.comment-config')
+-- require('nycrat.plugins.goyo-config')
+-- require('nycrat.plugins.lualine-config')
+-- require('nycrat.plugins.neovide-config')
+-- require('nycrat.plugins.telescope-config')
+-- require('nycrat.plugins.nvimtree-config')
+-- require('nycrat.plugins.gh-config')
 
 require("font-swap").setup({
   fonts = {
