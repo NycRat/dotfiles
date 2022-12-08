@@ -127,7 +127,7 @@ _G.packer_plugins = {
   ["gui-fonts.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/gui-fonts.nvim",
-    url = "/Users/avah/personal/repositories/MISC/gui-fonts.nvim"
+    url = "https://github.com/nycrat/gui-fonts.nvim"
   },
   harpoon = {
     loaded = true,
@@ -148,11 +148,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
-  },
-  ["leap.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/leap.nvim",
-    url = "https://github.com/ggandor/leap.nvim"
   },
   ["litee.nvim"] = {
     loaded = true,
@@ -228,7 +223,7 @@ _G.packer_plugins = {
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "/Users/avah/personal/repositories/MISC/rose-pine"
+    url = "https://github.com/nycrat/rose-pine"
   },
   ["spellsitter.nvim"] = {
     loaded = true,

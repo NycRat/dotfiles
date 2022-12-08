@@ -42,7 +42,7 @@ local options = {
   -- clipboard = "unnamedplus",
 }
 
-vim.opt.nrformats:append("alpha") -- increment letters
+-- vim.opt.nrformats:append("alpha") -- increment letters
 vim.opt.shortmess:append("I") -- don't show default startup message
 
 for option, value in pairs(options) do vim.opt[option] = value end

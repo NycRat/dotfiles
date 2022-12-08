@@ -32,7 +32,7 @@ vim.g["neoformat_enabled_text"] = {"txtformat"}
 
 vim.g["indentLine_fileTypeExclude"] = {"dashboard"}
 
-require('leap').add_default_mappings()
+-- require('leap').add_default_mappings()
 
 require("nvim-treesitter.configs").setup {
   context_commentstring = {enable = true},

@@ -26,7 +26,7 @@ vim.api.nvim_command([[
       silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
     endif
     " set showmode
-    highlight LineNr guifg=#d8d0cc
+    " highlight LineNr guifg=#d8d0cc
     set showcmd
     set scrolloff=10
     lua require('lualine').hide({unhide=true})

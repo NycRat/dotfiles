@@ -5,9 +5,8 @@ require("packer").startup(function()
   use("ryanoasis/vim-devicons")
   use("nvim-tree/nvim-web-devicons")
 
-  -- use("~/personal/repositories/MISC/todo.nvim")
   use("nycrat/todo.nvim")
-  use("~/personal/repositories/MISC/gui-fonts.nvim")
+  use("nycrat/gui-fonts.nvim")
 
   -- easier coding
   use({"neoclide/coc.nvim", branch = "release"})
@@ -20,7 +19,7 @@ require("packer").startup(function()
   use("sbdchd/neoformat")
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
   use("nvim-treesitter/nvim-treesitter-context")
-  use("ggandor/leap.nvim")
+  -- use("ggandor/leap.nvim")
   use({
     "kylechui/nvim-surround",
     tag = "*",
@@ -73,8 +72,7 @@ require("packer").startup(function()
   use("ellisonleao/gruvbox.nvim")
   use("folke/tokyonight.nvim")
   -- use({"rose-pine/neovim", as = "rose-pine"})
-  use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
-  -- use({"nycrat/rose-pine", as = "rose-pine"})
+  use({"nycrat/rose-pine", as = "rose-pine"})
   use("Everblush/everblush.nvim")
 end)
 
