@@ -4,7 +4,7 @@ local silent = {silent = true}
 
 local harpoon_ui = require("harpoon.ui")
 
-require('harpoon').setup({excluded_filetypes = {"NvimTree"}})
+require("harpoon").setup({excluded_filetypes = {"NvimTree"}})
 
 local function harpoon_nav_file(file_index)
   return function() harpoon_ui.nav_file(file_index) end

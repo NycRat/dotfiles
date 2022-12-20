@@ -23,18 +23,10 @@ nnoremap("N", "Nzzzv")
 vnoremap("n",
          [[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]],
          silent)
--- vim.cmd[[vnoremap ml :<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>:<c-u>set hlsearch<CR>]]
--- vnoremap("ml", ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@\",'/\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>")
 
 -- -- Resize Window
 nnoremap("H", "2<C-W>>")
 nnoremap("L", "2<C-W><")
--- nnoremap("<C- >k", "5<C-W>-")
--- nnoremap("<C- >j", "5<C-W>+")
-
--- Moving Text (who actually uses this)
--- vnoremap("J", "<Cmd>m '>+1<CR>gv=gv", silent)
--- vnoremap("K", "<Cmd>m '<-2<CR>gv=gv", silent)
 
 -- Stacking Text
 vnoremap("<D-j>", "J")
@@ -56,7 +48,7 @@ tnoremap("<C-c><C-c>", "<C-\\><C-n>", silent)
 tnoremap("<D-v>", function()
   local keys = vim.api.nvim_replace_termcodes("<C-\\><C-n>\"+pi", true, false,
                                               true)
-  vim.api.nvim_feedkeys(keys, 'n', false)
+  vim.api.nvim_feedkeys(keys, "n", false)
 end, silent)
 
 -- writing
@@ -75,9 +67,9 @@ nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
 nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
 nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
-nnoremap('<leader>m', "<Cmd>Neoformat<CR>")
-vnoremap('<leader>m', ":Neoformat<CR>")
-nnoremap('<leader>cm', "<Cmd>CellularAutomaton make_it_rain<CR>")
+nnoremap("<leader>m", "<Cmd>Neoformat<CR>")
+vnoremap("<leader>m", ":Neoformat<CR>")
+nnoremap("<leader>cm", "<Cmd>CellularAutomaton make_it_rain<CR>")
 
 -- misc
 vnoremap("<leader>p", "\"_dp")

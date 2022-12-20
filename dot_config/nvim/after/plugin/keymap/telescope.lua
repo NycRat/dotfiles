@@ -1,5 +1,8 @@
 local nnoremap = require("nycrat.keymap").nnoremap
 
-nnoremap("<leader>p", "<cmd>lua require('telescope.builtin').find_files()<CR>")
-nnoremap("<leader>x", "<cmd>lua require('telescope.builtin').live_grep()<CR>")
-nnoremap("<leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>")
+local telescope_builtin = require("telescope.builtin")
+local silent = {silent = true}
+
+nnoremap("<leader>p", telescope_builtin.find_files, silent)
+nnoremap("<leader>x", telescope_builtin.live_grep, silent)
+nnoremap("<leader>b", telescope_builtin.buffers, silent)

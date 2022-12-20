@@ -79,7 +79,7 @@ require("packer").startup(function()
   -- color themes
   use("folke/tokyonight.nvim")
   -- use({"nycrat/rose-pine", as = "rose-pine"})
-  use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
+  use("~/personal/repositories/MISC/rose-pine")
 end)
 
 -- require("nycrat.plugins.misc-config")

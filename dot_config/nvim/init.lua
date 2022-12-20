@@ -1,5 +1,6 @@
+-- 💀💀💀💀💀💀
 vim.g.mapleader = " "
 
-require('impatient')
+require("impatient")
 
-require('nycrat')
+require("nycrat")

@@ -35,8 +35,8 @@ local options = {
   colorcolumn = "80",
   updatetime = 200,
   scrolloff = 10,
-  mouse = 'a',
-  guicursor = 'a:block',
+  mouse = "a",
+  guicursor = "a:block",
 
   title = true,
   -- titlestring = "%t - Wvim",

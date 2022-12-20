@@ -50,7 +50,7 @@ vim.api.nvim_create_user_command("Run", function()
       vim.cmd("term " .. command)
       vim.cmd("resize 20N")
       local keys = vim.api.nvim_replace_termcodes("i", true, false, true)
-      vim.api.nvim_feedkeys(keys, 'n', false)
+      vim.api.nvim_feedkeys(keys, "n", false)
       break
     end
   end

@@ -1,12 +1,3 @@
--- require('nycrat.plugins.ccc-config')
--- require('nycrat.plugins.comment-config')
--- require('nycrat.plugins.goyo-config')
--- require('nycrat.plugins.lualine-config')
--- require('nycrat.plugins.neovide-config')
--- require('nycrat.plugins.telescope-config')
--- require('nycrat.plugins.nvimtree-config')
--- require('nycrat.plugins.gh-config')
-
 require("font-swap").setup({
   fonts = {
     "MesloLGS NF:h18", -- "Fixedsys Excelsior 3.01:h22",
@@ -32,8 +23,6 @@ vim.g["neoformat_enabled_text"] = {"txtformat"}
 
 vim.g["indentLine_fileTypeExclude"] = {"dashboard"}
 
--- require('leap').add_default_mappings()
-
 require("nvim-treesitter.configs").setup {
   context_commentstring = {enable = true},
   highlight = {enable = true, disable = {"markdown"}},
@@ -54,4 +43,4 @@ require("nvim-treesitter.configs").setup {
 
 require("ccc").setup()
 
-require('spectre').setup()
+require("spectre").setup()
