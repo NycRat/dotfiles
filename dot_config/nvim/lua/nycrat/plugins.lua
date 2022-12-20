@@ -10,15 +10,16 @@ require("packer").startup(function()
 
   -- easier coding
   use({"neoclide/coc.nvim", branch = "release"})
-  -- use({"prettier/vim-prettier", run = "yarn install"})
   use("numToStr/Comment.nvim")
-  use("jiangmiao/auto-pairs")
+  -- use("jiangmiao/auto-pairs")
+  use("windwp/nvim-autopairs")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("MaxMEllon/vim-jsx-pretty")
   use("rhysd/vim-clang-format")
   use("sbdchd/neoformat")
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
   use("nvim-treesitter/nvim-treesitter-context")
+  use("nvim-treesitter/playground")
   -- use("ggandor/leap.nvim")
   use({
     "kylechui/nvim-surround",
@@ -42,6 +43,14 @@ require("packer").startup(function()
   use("airblade/vim-gitgutter")
   use({"ldelossa/gh.nvim", requires = {{"ldelossa/litee.nvim"}}})
 
+  -- Debugging
+  use("mfussenegger/nvim-dap")
+  use("rcarriga/nvim-dap-ui")
+  use("theHamsta/nvim-dap-virtual-text")
+  use("nvim-telescope/telescope-dap.nvim")
+
+  use("mfussenegger/nvim-dap-python")
+
   -- writing
   use("junegunn/goyo.vim")
   use("preservim/vim-pencil")
@@ -62,18 +71,15 @@ require("packer").startup(function()
   -- use("norcalli/nvim-colorizer.lua")
   use("uga-rosa/ccc.nvim")
 
-  use("lewis6991/spellsitter.nvim",
-      {config = function() require("spellsitter").setup() end})
+  -- use("lewis6991/spellsitter.nvim",
+  --     {config = function() require("spellsitter").setup() end})
   use("p00f/nvim-ts-rainbow")
   use("nvim-pack/nvim-spectre")
 
   -- color themes
-  use("catppuccin/nvim")
-  use("ellisonleao/gruvbox.nvim")
   use("folke/tokyonight.nvim")
-  -- use({"rose-pine/neovim", as = "rose-pine"})
-  use({"nycrat/rose-pine", as = "rose-pine"})
-  use("Everblush/everblush.nvim")
+  -- use({"nycrat/rose-pine", as = "rose-pine"})
+  use({"~/personal/repositories/MISC/rose-pine", as = "rose-pine"})
 end)
 
 -- require("nycrat.plugins.misc-config")

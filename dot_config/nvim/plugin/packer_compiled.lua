@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   ["ccc.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/ccc.nvim",
@@ -99,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
-  ["everblush.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/everblush.nvim",
-    url = "https://github.com/Everblush/everblush.nvim"
-  },
   ["gh.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/gh.nvim",
@@ -118,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/goyo.vim",
     url = "https://github.com/junegunn/goyo.vim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["gui-fonts.nvim"] = {
     loaded = true,
@@ -164,10 +149,30 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
-  nvim = {
+  ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
   ["nvim-spectre"] = {
     loaded = true,
@@ -215,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  playground = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -223,12 +233,12 @@ _G.packer_plugins = {
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/nycrat/rose-pine"
+    url = "/Users/avah/personal/repositories/MISC/rose-pine"
   },
-  ["spellsitter.nvim"] = {
+  ["telescope-dap.nvim"] = {
     loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
-    url = "https://github.com/lewis6991/spellsitter.nvim"
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
