@@ -27,8 +27,8 @@ vnoremap("n",
 -- vnoremap("ml", ":<c-u>let temp_variable=@\"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@\",'/\')<CR>'<CR>:let @\"=temp_variable<CR>:<c-u>set hlsearch<CR>")
 
 -- -- Resize Window
-nnoremap("<D-]>", "2<C-W>>")
-nnoremap("<D-[>", "2<C-W><")
+nnoremap("H", "2<C-W>>")
+nnoremap("L", "2<C-W><")
 -- nnoremap("<C- >k", "5<C-W>-")
 -- nnoremap("<C- >j", "5<C-W>+")
 
@@ -91,6 +91,7 @@ vnoremap("J", "mzJ`z")
 
 -- Running Code
 nnoremap("<leader>cb", "<Cmd>Build<CR>", silent)
+nnoremap("<leader>cd", "<Cmd>DebugBuild<CR>", silent)
 nnoremap("<leader>cl", "<Cmd>Run<CR>", silent)
 nnoremap("<leader>cr", "<Cmd>Ha<CR>", silent)
 
