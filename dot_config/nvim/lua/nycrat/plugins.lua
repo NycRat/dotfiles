@@ -36,6 +36,7 @@ require("packer").startup(function()
   use("ThePrimeagen/git-worktree.nvim")
   use("nvim-telescope/telescope.nvim")
   use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
+  use("fannheyward/telescope-coc.nvim")
   use("ThePrimeagen/harpoon")
 
   -- git
@@ -54,6 +55,12 @@ require("packer").startup(function()
   -- writing
   use("junegunn/goyo.vim")
   use("preservim/vim-pencil")
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = {"markdown"} end,
+    ft = {"markdown"}
+  })
 
   -- misc
   use("ThePrimeagen/vim-be-good")
@@ -76,8 +83,16 @@ require("packer").startup(function()
   use("p00f/nvim-ts-rainbow")
   use("nvim-pack/nvim-spectre")
 
+  use("xiyaowong/nvim-transparent")
+
+  -- use({
+  --   "folke/noice.nvim",
+  --   requires = {
+  --     "MunifTanjim/nui.nvim", "rcarriga/nvim-notify"
+  --   }
+  -- })
+
   -- color themes
-  use("folke/tokyonight.nvim")
   -- use({"nycrat/rose-pine", as = "rose-pine"})
   use("~/personal/repositories/MISC/rose-pine")
 end)

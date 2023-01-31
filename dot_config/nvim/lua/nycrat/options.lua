@@ -4,7 +4,7 @@ local options = {
   tabstop = 2,
   shiftwidth = 2,
   expandtab = true,
-  showtabline = 2,
+  showtabline = 0,
 
   number = true,
   relativenumber = true,
@@ -34,17 +34,20 @@ local options = {
 
   colorcolumn = "80",
   updatetime = 200,
-  scrolloff = 10,
+  scrolloff = 15,
   mouse = "a",
   guicursor = "a:block",
 
   title = true,
   -- titlestring = "%t - Wvim",
+  titlestring = "Neovim - %t",
   guifont = "MesloLGS NF:h18"
   -- clipboard = "unnamedplus",
 }
 
 -- vim.opt.nrformats:append("alpha") -- increment letters
-vim.opt.shortmess:append("I") -- don't show default startup message
+vim.opt.shortmess:append("IsF")
+
+-- vim.o.shortmess = "filnxstToOFS"
 
 for option, value in pairs(options) do vim.opt[option] = value end

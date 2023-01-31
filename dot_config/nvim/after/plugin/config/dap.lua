@@ -1,6 +1,7 @@
 local dap = require("dap")
 
 require("dapui").setup({
+  mappings = {expand = {"o", "<2-LeftMouse>"}, open = "<CR>"},
   layouts = {
     {
       elements = {
@@ -10,7 +11,7 @@ require("dapui").setup({
       size = 0.3,
       position = "left"
     }, {elements = {"repl", "console"}, size = 0.3, position = "bottom"}
-  },
+  }
 })
 
 require("nvim-dap-virtual-text").setup()
@@ -31,17 +32,28 @@ dap.configurations.cpp = {
     program = function()
       local filetype = vim.bo.filetype
 
+      local target_file = "No File Selected"
+
       if (filetype == "cpp" or filetype == "c") then
         local file = vim.fn.expand("%:p:r") .. ".o"
-        return vim.fn.input("Path to executable: ", file, "file")
+        target_file = vim.fn.input("Path to executable: ", file, "file")
       end
 
       if (filetype == "rust") then
-        return vim.fn.input("Path to executable: ",
-                            vim.loop.cwd() .. "/target/debug/", "file")
+        target_file = vim.fn.input("Path to executable: ",
+                                   vim.loop.cwd() .. "/target/debug/", "file")
       end
 
-      return vim.fn.input("Path to executable: ", vim.loop.cwd() .. "/", "file")
+      if (target_file == "No File Selected") then
+        target_file = vim.fn.input("Path to executable: ",
+                                   vim.loop.cwd() .. "/", "file")
+      end
+
+      if (target_file ~= nil and target_file ~= "") then
+        return target_file
+      else
+        return "No File Selected"
+      end
     end,
     cwd = "${workspaceFolder}",
     stopOnEntry = true,
