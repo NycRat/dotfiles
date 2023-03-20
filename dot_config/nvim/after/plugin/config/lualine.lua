@@ -18,13 +18,13 @@ require("lualine").setup({
   -- sections = {lualine_c = {"filename", {getWords}}, lualine_x = {{getGuiFont}, 'filetype'}},
   sections = {
     lualine_c = {"filename", {getWords}},
-    -- lualine_x = {
-    --   {
-    --     require("noice").api.statusline.mode.get,
-    --     cond = require("noice").api.statusline.mode.has,
-    --     color = {fg = "#aaf7f0"}
-    --   }, "filetype"
-    -- }
+    lualine_x = {
+      {
+        require("noice").api.statusline.mode.get,
+        cond = require("noice").api.statusline.mode.has,
+        color = {fg = "#aaf7f0"}
+      }, "filetype"
+    }
   },
   options = {disabled_filetypes = {"NvimTree", "packer"}}
 })

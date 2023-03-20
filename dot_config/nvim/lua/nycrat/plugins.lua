@@ -85,12 +85,12 @@ require("packer").startup(function()
 
   use("xiyaowong/nvim-transparent")
 
-  -- use({
-  --   "folke/noice.nvim",
-  --   requires = {
-  --     "MunifTanjim/nui.nvim", "rcarriga/nvim-notify"
-  --   }
-  -- })
+  use({
+    "folke/noice.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim", "rcarriga/nvim-notify"
+    }
+  })
 
   -- color themes
   -- use({"nycrat/rose-pine", as = "rose-pine"})
