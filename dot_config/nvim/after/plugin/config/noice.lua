@@ -24,13 +24,13 @@ require("noice").setup({
       lua = {pattern = "^:%s*lua%s+", icon = "", lang = "lua"},
       help = {pattern = "^:%s*he?l?p?%s+", icon = ""},
       search_and_replace = {
-        kind = "search_and_replace",
+        kind = "replace",
         pattern = "^:%%?s/",
         icon = " ",
         lang = "regex",
       },
       search_and_replace_range = {
-        kind = "search_and_replace",
+        kind = "replace",
         pattern = "^:'<,'>%%?s/",
         icon = " ",
         lang = "regex",

@@ -257,6 +257,11 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["quickmath.nvim"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/quickmath.nvim",
+    url = "https://github.com/jbyuki/quickmath.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/rose-pine",

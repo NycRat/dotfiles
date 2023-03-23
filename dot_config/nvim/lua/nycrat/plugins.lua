@@ -65,6 +65,7 @@ require("packer").startup(function()
   -- misc
   use("ThePrimeagen/vim-be-good")
   use("Eandrju/cellular-automaton.nvim")
+  use("jbyuki/quickmath.nvim")
 
   -- use("KabbAmine/vCoolor.vim")
   use("mbbill/undotree")
@@ -87,9 +88,7 @@ require("packer").startup(function()
 
   use({
     "folke/noice.nvim",
-    requires = {
-      "MunifTanjim/nui.nvim", "rcarriga/nvim-notify"
-    }
+    requires = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}
   })
 
   -- color themes

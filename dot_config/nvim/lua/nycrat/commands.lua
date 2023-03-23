@@ -1,6 +1,6 @@
 local build_commands = {
   c = "g++ -std=c++17 -o %:p:r.o %",
-  cpp = "g++ -std=c++17 -o %:p:r.o %",
+  cpp = "g++ -std=c++17 -Wall -O2 -o %:p:r.o %",
   rust = "cargo build --release",
   go = "go build -o %:p:r.o %"
 }
@@ -64,3 +64,7 @@ end, {})
 vim.api.nvim_create_user_command("Config",
                                  function() vim.cmd [[cd ~/.config/nvim]] end,
                                  {})
+
+vim.api.nvim_create_user_command("Cn", function()
+  vim.cmd[[CocCommand rust-analyzer.reload]]
+end, {})
