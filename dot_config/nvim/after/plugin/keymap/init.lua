@@ -61,7 +61,9 @@ inoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
 inoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- plugins
-nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR> ", silent)
+nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>z", "<Cmd>NvimTreeCollapse<CR>", silent)
 nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
 nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
 nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)

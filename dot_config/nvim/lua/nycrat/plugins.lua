@@ -66,6 +66,14 @@ require("packer").startup(function()
   use("ThePrimeagen/vim-be-good")
   use("Eandrju/cellular-automaton.nvim")
   use("jbyuki/quickmath.nvim")
+  use({
+    "glepnir/template.nvim",
+    setup = function()
+      require('template').setup({
+        temp_dir = "~/.config/nvim/template"
+      })
+    end
+  })
 
   -- use("KabbAmine/vCoolor.vim")
   use("mbbill/undotree")

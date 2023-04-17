@@ -287,6 +287,12 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["template.nvim"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/opt/template.nvim",
+    url = "https://github.com/glepnir/template.nvim"
+  },
   ["todo.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/todo.nvim",
@@ -335,6 +341,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: template.nvim
+time([[Setup for template.nvim]], true)
+try_loadstring("\27LJ\2\n^\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\rtemp_dir\28~/.config/nvim/template\nsetup\rtemplate\frequire\0", "setup", "template.nvim")
+time([[Setup for template.nvim]], false)
+time([[packadd for template.nvim]], true)
+vim.cmd [[packadd template.nvim]]
+time([[packadd for template.nvim]], false)
 -- Setup for: markdown-preview.nvim
 time([[Setup for markdown-preview.nvim]], true)
 try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
