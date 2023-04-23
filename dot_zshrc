@@ -50,7 +50,9 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 bindkey -s ^f "^utmux-sessionizer\n"
-bindkey -s ^n "^uneovide --frame none --geometry=157x46\n"
+# bindkey -s ^n "^uneovide --frame none --geometry=157x46\n"
+bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 $(ps -A | grep -m1 Applications/kitty | awk '{print $1}')\n"
+
 # bindkey -s ^f "ta\n"
 
 alias neo="neovide --frame none --geometry=157x46"
@@ -79,5 +81,10 @@ PATH="/Users/avah/.local/bin/:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
 export NVIM_COC_LOG_LEVEL=debug
+
+export PYTHONUSERBASE="$HOME/local/pythonpackage"
+export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
+export PATH="$PYTHONUSERBASE/bin":$PATH
+export PATH="$HOME/.cargo/bin":$PATH
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

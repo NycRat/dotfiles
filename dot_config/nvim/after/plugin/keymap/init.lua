@@ -6,6 +6,9 @@ local tnoremap = Remap.tnoremap
 
 local silent = {silent = true}
 
+nnoremap("<C-Z>",
+         "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep -m1 Applications/kitty | awk '{print $1}')<CR>")
+
 -- easier to enter normal mode
 inoremap("jk", "<Esc>")
 
@@ -62,7 +65,8 @@ inoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- plugins
 nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR><Cmd>only<CR>", silent)
-nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>",
+         silent)
 nnoremap("<leader>z", "<Cmd>NvimTreeCollapse<CR>", silent)
 nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
 nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)

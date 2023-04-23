@@ -1,7 +1,5 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-include font.conf
-
 #: Fonts {{{
 
 #: kitty has very powerful font management. You can configure
@@ -21,6 +19,17 @@ include font.conf
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
+#:     font_family      Operator Mono Book
+#:     bold_font        Operator Mono Medium
+#:     italic_font      Operator Mono Book Italic
+#:     bold_italic_font Operator Mono Medium Italic
+
+font_family MesloLGS NF Regular
+bold_font MesloLGS NF Bold
+italic_font MesloLGS NF Italic
+bold_italic_font MesloLGS NF Bold Italic
+
+font_size 20.0
 
 #: Font size (in pts)
 
@@ -987,13 +996,12 @@ background_opacity 1
 #: this option when reloading the config will only work if
 #: dynamic_background_opacity was enabled in the original config.
 
-background_image ~/Desktop/background_images/bg10.png
-# background_image ~/Desktop/lback.png
-# background_image none
+# background_image ~/Desktop/background_image.png
+background_image none
 
 #: Path to a background image. Must be in PNG format.
 
-background_image_layout scaled
+# background_image_layout tiled
 
 #: Whether to tile, scale or clamp the background image. The value can
 #: be one of tiled, mirror-tiled, scaled, clamped.
@@ -1381,7 +1389,7 @@ background_image_layout scaled
 #: By default, kitty will stay running, even with no open windows, as
 #: is the expected behavior on macOS.
 
-macos_window_resizable yes
+macos_window_resizable no
 
 #: Disable this if you want kitty top-level OS windows to not be
 #: resizable on macOS. Changing this option by reloading the config
@@ -2166,6 +2174,6 @@ map cmd+t       new_tab_with_cwd
 
 
 # BEGIN_KITTY_THEME
-# Rosé Pine
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
