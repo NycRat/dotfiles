@@ -52,7 +52,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 bindkey -s ^f "^utmux-sessionizer\n"
 # bindkey -s ^n "^uneovide --frame none --geometry=157x46\n"
 bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
-bindkey -s ^x "^ufont-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
+bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
 bindkey ^w forward-word
 bindkey ^b backward-word
 

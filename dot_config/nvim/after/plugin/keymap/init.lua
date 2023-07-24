@@ -6,12 +6,10 @@ local tnoremap = Remap.tnoremap
 
 local silent = {silent = true}
 
--- nnoremap("<C-z>",
---          "<Cmd>!font-switcher; kill -SIGUSR1 $(ps -A | grep '^ \\d\\+ .*\\d\\+:\\d\\+.\\d\\+ /Applications/kitty' | awk '{print $1}')<CR>")
 nnoremap("<C-z>",
          "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 
-nnoremap("<C-x>",
+nnoremap("<C-b>",
          "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 
 -- easier to enter normal mode
