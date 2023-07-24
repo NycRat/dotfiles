@@ -6,7 +6,7 @@
 -- })
 -- vim.cmd [[colorscheme tokyonight-night]]
 vim.cmd[[colorscheme rose-pine]]
-vim.cmd[[hi CursorLine guibg=#101017]]
+vim.cmd[[hi CursorLine guibg=#101c26]]
 vim.cmd[[hi COlorColumn guibg=#1c1123]]
 
 -- contrast in line numbers

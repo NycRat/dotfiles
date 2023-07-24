@@ -17,10 +17,12 @@
         "-cli",
         "/opt/homebrew/bin/arduino-cli",
         "-cli-config",
-        "/Users/avah/Library/Arduino15/arduino-cli.yaml",
+        "~/Library/Arduino15/arduino-cli.yaml",
         "-fqbn",
-        "arduino:avr:uno",
+        "arduino:avr:uno"
       ]
     }
-  }
+  },
+  "clangd.fallbackFlags": ["-std=c++17"],
+  "cSpell.enabledLanguageIds": ["markdown", "text", "txt"]
 }

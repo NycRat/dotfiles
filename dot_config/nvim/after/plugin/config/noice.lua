@@ -20,7 +20,7 @@ require("noice").setup({
         icon = " ",
         lang = "regex"
       },
-      bash = {pattern = "^:%s*!", icon = "$", lang = "bash"},
+      bash = {kind = "bash", pattern = "^:%s*!", icon = "$", lang = "bash"},
       lua = {pattern = "^:%s*lua%s+", icon = "", lang = "lua"},
       help = {pattern = "^:%s*he?l?p?%s+", icon = ""},
       search_and_replace = {
