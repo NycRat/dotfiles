@@ -24,7 +24,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

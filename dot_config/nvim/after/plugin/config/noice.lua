@@ -80,7 +80,7 @@ require("noice").setup({
     inc_rename = false,
     lsp_doc_border = true
   },
-  throttle = 1000 / 60,
+  throttle = 1000 / 120,
   routes = {
     {
       filter = {event = "msg_show", kind = "", find = "written"},

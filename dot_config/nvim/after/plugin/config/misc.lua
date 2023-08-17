@@ -11,15 +11,15 @@ vim.g["vcoolor_lowercase"] = true
 
 vim.g["clang_format#detect_style_file)"] = 1
 
-vim.g["neoformat_lua_luaformat"] = {
-  exe = "lua-format",
-  args = {"--indent-width=2"}
-}
+-- vim.g["neoformat_lua_luaformat"] = {
+--   exe = "lua-format",
+--   args = {"--indent-width=2"}
+-- }
 
-vim.g["neoformat_text_txtformat"] = {exe = "txt-format", args = {}}
+-- vim.g["neoformat_text_txtformat"] = {exe = "txt-format", args = {}}
 
-vim.g["neoformat_enabled_lua"] = {"luaformat"}
-vim.g["neoformat_enabled_text"] = {"txtformat"}
+-- vim.g["neoformat_enabled_lua"] = {"luaformat"}
+-- vim.g["neoformat_enabled_text"] = {"txtformat"}
 
 vim.g["indentLine_fileTypeExclude"] = {"dashboard"}
 
@@ -31,14 +31,14 @@ require("nvim-treesitter.configs").setup {
     disable = {"cpp", "typescript", "typescriptreact", "rust"}
   },
   -- ...
-  rainbow = {
-    enable = true,
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    max_file_lines = nil -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
-  }
+  -- rainbow = {
+  --   enable = true,
+  --   -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+  --   extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+  --   max_file_lines = nil -- Do not enable for files with more than n lines, int
+  --   -- colors = {}, -- table of hex strings
+  --   -- termcolors = {} -- table of colour name strings
+  -- }
 }
 
 require("ccc").setup()

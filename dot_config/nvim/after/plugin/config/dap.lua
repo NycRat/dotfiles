@@ -16,7 +16,7 @@ require("dapui").setup({
 
 require("nvim-dap-virtual-text").setup()
 
-require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+-- require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 
 dap.adapters.lldb = {
   type = "executable",

@@ -76,8 +76,6 @@ nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
 nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
 nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
-nnoremap("<leader>m", "<Cmd>Neoformat<CR>")
-vnoremap("<leader>m", ":Neoformat<CR>")
 nnoremap("<leader>cm", "<Cmd>CellularAutomaton make_it_rain<CR>")
 
 -- misc
