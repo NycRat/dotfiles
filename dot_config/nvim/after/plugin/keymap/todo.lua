@@ -1,7 +1,7 @@
 local Remap = require("nycrat.keymap")
 local nnoremap = Remap.nnoremap
 
-local silent = {silent = true}
+local silent = { silent = true }
 
 -- require("todo").setup({
 --   default_file_extension = ".txt"
