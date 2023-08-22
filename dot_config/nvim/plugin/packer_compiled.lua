@@ -89,10 +89,10 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/ccc.nvim",
     url = "https://github.com/uga-rosa/ccc.nvim"
   },
-  ["cellular-automaton.nvim"] = {
+  ["cloak.nvim"] = {
     loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
-    url = "https://github.com/Eandrju/cellular-automaton.nvim"
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/cloak.nvim",
+    url = "https://github.com/laytan/cloak.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -317,11 +317,6 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["quickmath.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/quickmath.nvim",
-    url = "https://github.com/jbyuki/quickmath.nvim"
-  },
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/rose-pine",
@@ -357,11 +352,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-devicons"] = {
     loaded = true,

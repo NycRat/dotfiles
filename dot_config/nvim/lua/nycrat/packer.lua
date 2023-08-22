@@ -1,5 +1,6 @@
 require("packer").startup(function()
 	use("wbthomason/packer.nvim")
+
 	use("nvim-lua/plenary.nvim")
 	use("tpope/vim-repeat")
 	use("ryanoasis/vim-devicons")
@@ -58,7 +59,6 @@ require("packer").startup(function()
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 	use("ThePrimeagen/harpoon")
-	use("ThePrimeagen/git-worktree.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
@@ -66,6 +66,7 @@ require("packer").startup(function()
 	use("kdheepak/lazygit.nvim")
 	use("airblade/vim-gitgutter")
 	use({ "ldelossa/gh.nvim", requires = { { "ldelossa/litee.nvim" } } })
+	use("ThePrimeagen/git-worktree.nvim")
 
 	-- Debugging
 	use("mfussenegger/nvim-dap")
@@ -86,17 +87,13 @@ require("packer").startup(function()
 	})
 
 	-- misc
-	use("ThePrimeagen/vim-be-good")
-	use("Eandrju/cellular-automaton.nvim")
-	use("jbyuki/quickmath.nvim")
 	use({
 		"glepnir/template.nvim",
 		setup = function()
 			require("template").setup({ temp_dir = "~/.config/nvim/template" })
 		end,
 	})
-
-	-- use("KabbAmine/vCoolor.vim")
+	use("laytan/cloak.nvim")
 	use("mbbill/undotree")
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -105,11 +102,8 @@ require("packer").startup(function()
 
 	use("lukas-reineke/indent-blankline.nvim")
 	use("lewis6991/impatient.nvim")
-	-- use("norcalli/nvim-colorizer.lua")
 	use("uga-rosa/ccc.nvim")
 
-	-- use("lewis6991/spellsitter.nvim",
-	--     {config = function() require("spellsitter").setup() end})
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-pack/nvim-spectre")
 
@@ -124,5 +118,3 @@ require("packer").startup(function()
 	-- use({"nycrat/rose-pine", as = "rose-pine"})
 	use("~/personal/repositories/MISC/rose-pine")
 end)
-
--- require("nycrat.plugins.misc-config")
