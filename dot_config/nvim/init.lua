@@ -1,6 +1,6 @@
 -- 💀💀💀💀💀💀
 vim.g.mapleader = " "
 
-require("impatient")
+vim.loader.enable()
 
 require("nycrat")

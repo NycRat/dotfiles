@@ -15,6 +15,9 @@ vim.g["clang_format#detect_style_file)"] = 1
 
 vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
 
+
+require("template").setup({ temp_dir = "~/.config/nvim/template" })
+
 require("nvim-treesitter.configs").setup({
 	context_commentstring = { enable = true },
 	highlight = { enable = true, additional_vim_regex_highlighting = false },

@@ -87,26 +87,17 @@ require("packer").startup(function()
 	})
 
 	-- misc
-	use({
-		"glepnir/template.nvim",
-		setup = function()
-			require("template").setup({ temp_dir = "~/.config/nvim/template" })
-		end,
-	})
+	use("glepnir/template.nvim")
 	use("laytan/cloak.nvim")
 	use("mbbill/undotree")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
-
 	use("lukas-reineke/indent-blankline.nvim")
-	use("lewis6991/impatient.nvim")
 	use("uga-rosa/ccc.nvim")
-
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-pack/nvim-spectre")
-
 	use("xiyaowong/nvim-transparent")
 
 	use({
