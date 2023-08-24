@@ -87,5 +87,7 @@ export PYTHONUSERBASE="$HOME/local/pythonpackage"
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
 export PATH="$PYTHONUSERBASE/bin":$PATH
 export PATH="$HOME/.cargo/bin":$PATH
+export COLORTERM=truecolor
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -n $TMUX ]] && export TERM="xterm-256color"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
