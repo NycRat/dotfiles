@@ -1,7 +1,6 @@
 require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
-	use("nvim-lua/plenary.nvim")
 	use("tpope/vim-repeat")
 	use("ryanoasis/vim-devicons")
 
@@ -34,12 +33,14 @@ require("packer").startup(function()
 			-- Snippets
 			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
+			{ "honza/vim-snippets" },
 		},
 	})
 
 	-- easier coding
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-context")
@@ -65,7 +66,6 @@ require("packer").startup(function()
 	-- git
 	use("kdheepak/lazygit.nvim")
 	use("airblade/vim-gitgutter")
-	use({ "ldelossa/gh.nvim", requires = { { "ldelossa/litee.nvim" } } })
 	use("ThePrimeagen/git-worktree.nvim")
 
 	-- Debugging
@@ -86,26 +86,21 @@ require("packer").startup(function()
 		ft = { "markdown" },
 	})
 
-	-- misc
-	use("glepnir/template.nvim")
-	use("laytan/cloak.nvim")
+  -- misc
 	use("mbbill/undotree")
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
-	use("lukas-reineke/indent-blankline.nvim")
 	use("uga-rosa/ccc.nvim")
-	use("p00f/nvim-ts-rainbow")
 	use("nvim-pack/nvim-spectre")
-	use("xiyaowong/nvim-transparent")
-
 	use({
 		"folke/noice.nvim",
-		requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+		requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", "nvim-lua/plenary.nvim" },
 	})
 
-	-- color themes
-	-- use({"nycrat/rose-pine", as = "rose-pine"})
+	-- looks
+	use("laytan/cloak.nvim")
+	use("nvim-lualine/lualine.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("xiyaowong/nvim-transparent")
 	use("~/personal/repositories/MISC/rose-pine")
+	-- use({"nycrat/rose-pine", as = "rose-pine"})
+
 end)

@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gh.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/gh.nvim",
-    url = "https://github.com/ldelossa/gh.nvim"
-  },
   ["git-worktree.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
@@ -158,11 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
-  },
-  ["litee.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/litee.nvim",
-    url = "https://github.com/ldelossa/litee.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -282,15 +272,15 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -332,11 +322,6 @@ _G.packer_plugins = {
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["template.nvim"] = {
-    loaded = true,
-    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/template.nvim",
-    url = "https://github.com/glepnir/template.nvim"
-  },
   ["todo.nvim"] = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/todo.nvim",
@@ -366,6 +351,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/avah/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/Users/avah/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
   }
 }
 

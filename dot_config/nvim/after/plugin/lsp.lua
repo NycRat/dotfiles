@@ -16,7 +16,7 @@ lsp.on_attach(function(client, bufnr)
   nnoremap("<leader>fF", function() vim.lsp.buf.declaration() end, opts)
   nnoremap("K", function() vim.lsp.buf.hover() end, opts)
   -- inoremap("<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-  inoremap("<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  inoremap("<C-j>", function() vim.lsp.buf.signature_help() end, opts)
 
   nnoremap("<leader>m", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
 
@@ -36,6 +36,17 @@ require("mason-nvim-dap").setup({
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+require("cmp").setup({
+  snippet = {
+    expand = function(args)
+      require("luasnip").lsp_expand(args.body)
+    end
+  },
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "luasnip" }
+  }
+})
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 

@@ -1,0 +1,30 @@
+snippet ccc Canadian Computing Competition Template
+	#include <iostream>
+
+	#define ll int64_t
+
+	using namespace std;
+
+	int main() {
+		ios_base::sync_with_stdio(false);
+		cin.tie(0);
+		
+		${0}
+
+		return 0;
+	}
+
+snippet lc Leetcode Template
+	#include <iostream>
+
+	using namespace std;
+
+	class Solution {
+	public:
+		${1:void} ${2:func}(${3:args}) {
+			${0}
+		}
+		Solution() {}
+	};
+
+	int main() { Solution(); }
