@@ -1,9 +1,6 @@
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
-
 require("nvim-tree").setup({
 	view = {
-		mappings = { list = { { key = "u", action = "dir_up" } } },
+		mappings = { list = { { key = "u", action = "dir_up" }, { key = "z", action = "cd" } } },
 		side = "right",
 		width = 40,
 	},

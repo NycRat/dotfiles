@@ -31,7 +31,7 @@ require("packer").startup(function()
 			{ "hrsh7th/cmp-nvim-lua" },
 
 			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
+			{ "L3MON4D3/LuaSnip", version = "2.*" },
 			{ "rafamadriz/friendly-snippets" },
 			{ "honza/vim-snippets" },
 		},
@@ -86,7 +86,7 @@ require("packer").startup(function()
 		ft = { "markdown" },
 	})
 
-  -- misc
+	-- misc
 	use("mbbill/undotree")
 	use("uga-rosa/ccc.nvim")
 	use("nvim-pack/nvim-spectre")
@@ -102,5 +102,4 @@ require("packer").startup(function()
 	use("xiyaowong/nvim-transparent")
 	use("~/personal/repositories/MISC/rose-pine")
 	-- use({"nycrat/rose-pine", as = "rose-pine"})
-
 end)

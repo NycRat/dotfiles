@@ -26,26 +26,26 @@ end)
 lsp.setup()
 
 require("mason-nvim-dap").setup({
-  ensure_installed = { "python" },
-  automatic_installation = true,
-  handlers = {
-    function(config)
-      require("mason-nvim-dap").default_setup(config)
-    end,
-  },
+  ensure_installed = { "python", "cpp" },
+	automatic_installation = true,
+	handlers = {
+		function(config)
+			require("mason-nvim-dap").default_setup(config)
+		end,
+	},
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 require("cmp").setup({
-  snippet = {
-    expand = function(args)
-      require("luasnip").lsp_expand(args.body)
-    end
-  },
-  sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" }
-  }
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
+	sources = {
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
+	},
 })
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
@@ -54,27 +54,27 @@ local null_ls = require("null-ls")
 local null_opts = lsp.build_options("null-ls", {})
 
 local txt_formatter = {
-  method = null_ls.methods.FORMATTING,
-  filetypes = { "txt", "text" },
-  generator = null_ls.formatter({
-    command = "txt-format",
-    args = { "$FILENAME" },
-    to_stdin = true,
-    from_stderr = true,
-  }),
+	method = null_ls.methods.FORMATTING,
+	filetypes = { "txt", "text" },
+	generator = null_ls.formatter({
+		command = "txt-format",
+		args = { "$FILENAME" },
+		to_stdin = true,
+		from_stderr = true,
+	}),
 }
 
 null_ls.setup({
-  on_attach = function(client, bufnr)
-    null_opts.on_attach(client, bufnr)
-  end,
-  sources = {
-    txt_formatter,
-  },
+	on_attach = function(client, bufnr)
+		null_opts.on_attach(client, bufnr)
+	end,
+	sources = {
+		txt_formatter,
+	},
 })
 
 require("mason-null-ls").setup({
-  ensure_installed = nil,
-  automatic_installation = false,
-  handlers = {},
+	ensure_installed = nil,
+	automatic_installation = false,
+	handlers = {},
 })
