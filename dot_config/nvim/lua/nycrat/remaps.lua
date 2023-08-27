@@ -4,11 +4,13 @@ local inoremap = Remap.inoremap
 local vnoremap = Remap.vnoremap
 local tnoremap = Remap.tnoremap
 
-local silent = { silent = true }
+local silent = {silent = true}
 
-nnoremap("<C-z>", "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
+nnoremap("<C-z>",
+         "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 
-nnoremap("<C-b>", "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
+nnoremap("<C-b>",
+         "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 
 -- easier to enter normal mode
 inoremap("jk", "<Esc>")
@@ -24,11 +26,9 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
-vnoremap(
-	"n",
-	[[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]],
-	silent
-)
+vnoremap("n",
+         [[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]],
+         silent)
 
 -- -- Resize Window
 nnoremap("H", "2<C-W>>")
@@ -52,8 +52,9 @@ nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
 -- nnoremap("<Esc>", "<C-\\><C-n>", silent)
 tnoremap("<C-c><C-c>", "<C-\\><C-n>", silent)
 tnoremap("<D-v>", function()
-	local keys = vim.api.nvim_replace_termcodes('<C-\\><C-n>"+pi', true, false, true)
-	vim.api.nvim_feedkeys(keys, "n", false)
+    local keys = vim.api.nvim_replace_termcodes('<C-\\><C-n>"+pi', true, false,
+                                                true)
+    vim.api.nvim_feedkeys(keys, "n", false)
 end, silent)
 
 -- writing
@@ -67,7 +68,8 @@ inoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- plugins
 nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR><Cmd>only<CR>", silent)
-nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>",
+         silent)
 nnoremap("<leader>z", "<Cmd>NvimTreeCollapse<CR>", silent)
 nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
 nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
