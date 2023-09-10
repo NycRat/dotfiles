@@ -22,10 +22,14 @@ snippet lc Leetcode Template
 
 	class Solution {
 	public:
-		${1:void} ${2:func}(${3:args}) {
-			${0}
-		}
+		${0}
 		Solution() {}
 	};
 
 	int main() { Solution(); }
+
+snippet sortv Sort Vector
+	sort(${1:vec}.begin(), $1.end());
+	
+snippet sortvr Sort Vector Reverse
+	sort(${1:vec}.rbegin(), $1.rend());

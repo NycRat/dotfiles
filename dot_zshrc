@@ -81,13 +81,23 @@ alias py="python3"
 PATH="/Users/avah/.local/bin/:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
+export GOPATH="/Users/avah/go"
 export NVIM_COC_LOG_LEVEL=debug
 
 export PYTHONUSERBASE="$HOME/local/pythonpackage"
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
 export PATH="$PYTHONUSERBASE/bin":$PATH
 export PATH="$HOME/.cargo/bin":$PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 export COLORTERM=truecolor
 
 [[ -n $TMUX ]] && export TERM="xterm-256color"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# bun completions
+[ -s "/Users/avah/.bun/_bun" ] && source "/Users/avah/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

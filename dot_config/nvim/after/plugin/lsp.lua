@@ -34,6 +34,7 @@ lsp.format_mapping("<leader>m", {
   },
   servers = {
     ["rust_analyzer"] = { "rust" },
+    ["gopls"] = { "go" },
     ["null-ls"] = {
       "lua",
       "c",
@@ -46,6 +47,8 @@ lsp.format_mapping("<leader>m", {
       "css",
       "sass",
       "scss",
+      "txt",
+      "text",
     },
   },
 })

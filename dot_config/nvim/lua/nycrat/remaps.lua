@@ -1,7 +1,7 @@
 local Remap = require("nycrat.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
-local vnoremap = Remap.vnoremap
+local xnoremap = Remap.xnoremap
 local tnoremap = Remap.tnoremap
 
 local silent = { silent = true }
@@ -22,7 +22,7 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
-vnoremap(
+xnoremap(
   "n",
   [[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]],
   silent
@@ -35,17 +35,17 @@ nnoremap("H", "2<C-W>>")
 nnoremap("L", "2<C-W><")
 
 -- Stacking Text
-vnoremap("<D-j>", "J")
+xnoremap("<D-j>", "J")
 
 -- Copy Paste
-vnoremap("<leader>y", "\"+y", silent)
+xnoremap("<leader>y", "\"+y", silent)
 
 -- Neovide Copy Paste
-vnoremap("<D-c>", "\"+y", silent)
+xnoremap("<D-c>", "\"+y", silent)
 
 inoremap("<D-v>", "<C-o>\"+p", silent)
 nnoremap("<D-v>", "\"+p", silent)
-vnoremap("<D-v>", "\"+p", silent)
+xnoremap("<D-v>", "\"+p", silent)
 
 -- built in terminal
 nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
@@ -76,14 +76,14 @@ nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
 nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
 
 -- misc
-vnoremap("<leader>p", "\"_dp")
-vnoremap("<leader>P", "\"_dP")
+-- vnoremap("<leader>p", "\"_dp")
+-- vnoremap("<leader>P", "\"_dP")
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 nnoremap("<leader>w", "<Cmd>w<CR>")
 nnoremap("<leader>q", "<Cmd>q<CR>")
 nnoremap("<leader><C-o>", "<Cmd>!open %<CR><CR>", silent)
 nnoremap("J", "mzJ`z")
-vnoremap("J", "mzJ`z")
+xnoremap("J", "mzJ`z")
 
 -- Running Code
 nnoremap("<leader>cb", "<Cmd>Build<CR>", silent)
