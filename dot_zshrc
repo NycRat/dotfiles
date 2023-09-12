@@ -8,20 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' frequency 7
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git z zsh-syntax-highlighting)
@@ -30,14 +18,14 @@ source $ZSH/oh-my-zsh.sh
 
 DISABLE_AUTO_TITLE=true
 
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="vim"
+else
+  export EDITOR="nvim"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -46,17 +34,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 bindkey -s ^f "^utmux-sessionizer\n"
-# bindkey -s ^n "^uneovide --frame none --geometry=157x46\n"
 bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
 bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
 
 source ~/.zshrc_unbind
 
-alias neo="neovide --frame none --geometry=157x46"
 alias n="nvim"
 
 export EDITOR=nvim
@@ -78,19 +62,20 @@ alias tree="exa -T --icons --git-ignore"
 alias python="python3"
 alias py="python3"
 
-PATH="/Users/avah/.local/bin/:$PATH"
+export GOPATH="/usr/local/go"
 
+PATH="$HOME/.local/bin/:$PATH"
 export PATH="$PATH:$(yarn global bin)"
-export GOPATH="/Users/avah/go"
-export NVIM_COC_LOG_LEVEL=debug
-
 export PYTHONUSERBASE="$HOME/local/pythonpackage"
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
 export PATH="$PYTHONUSERBASE/bin":$PATH
 export PATH="$HOME/.cargo/bin":$PATH
-export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+
 export COLORTERM=truecolor
+
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 [[ -n $TMUX ]] && export TERM="xterm-256color"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
