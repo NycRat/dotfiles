@@ -2,21 +2,22 @@ local build_commands = {
   c = "g++ -std=c++17 -o %:p:r.o %",
   cpp = "g++ -std=c++17 -Wall -O2 -o %:p:r.o %",
   rust = "cargo build --release",
-  go = "go build -o %:p:r.o %",
+  go = "go build",
 }
 
 local debug_build_commands = {
   c = "g++ -std=c++17 -g -o %:p:r.o %",
   cpp = "g++ -std=c++17 -g -o %:p:r.o %",
   rust = "cargo build",
-  go = "go build -o %:p:r.o %",
+  go = "go build",
 }
 
 local run_commands = {
   c = "%:p:r.o",
   cpp = "%:p:r.o",
   rust = "cargo run --release",
-  go = "%:p:r.o",
+  -- go = "%:p:r.o",
+  go = "go run .",
 }
 
 vim.api.nvim_create_user_command("Build", function()

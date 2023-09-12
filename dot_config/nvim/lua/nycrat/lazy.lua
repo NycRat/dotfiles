@@ -90,7 +90,6 @@ require("lazy").setup({
     dependencies = { { "MunifTanjim/nui.nvim" }, { "rcarriga/nvim-notify" }, { "nvim-lua/plenary.nvim" } },
   },
   { "nycrat/todo.nvim" },
-  { "nycrat/gui-fonts.nvim" },
 
   -- looks
   { "laytan/cloak.nvim" },

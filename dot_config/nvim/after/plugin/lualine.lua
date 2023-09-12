@@ -16,10 +16,7 @@ local function getWords()
   end
 end
 
-local function getGuiFont() return vim.api.nvim_get_option("guifont") end
-
 require("lualine").setup({
-  -- sections = {lualine_c = {"filename", {getWords}}, lualine_x = {{getGuiFont}, 'filetype'}},
   sections = {
     lualine_c = { "filename", { getWords } },
     lualine_x = {

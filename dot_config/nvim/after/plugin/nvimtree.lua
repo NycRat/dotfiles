@@ -1,3 +1,8 @@
+local Remap = require("nycrat.keymap")
+local nnoremap = Remap.nnoremap
+
+local silent = { silent = true }
+
 local function my_on_attach(bufnr)
   local api = require("nvim-tree.api")
 
@@ -29,3 +34,7 @@ require("nvim-tree").setup({
   filters = { dotfiles = false, custom = { "^.DS_Store$", "^\\.git$" } },
   git = { enable = true, ignore = false, timeout = 500 },
 })
+
+nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader>z", "<Cmd>NvimTreeCollapse<CR>", silent)

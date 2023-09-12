@@ -1,18 +1,7 @@
-require("font-swap").setup({
-  fonts = {
-    "MesloLGS NF:h18", -- "Fixedsys Excelsior 3.01:h22",
-    "FixedsysExcelsiorIIIb Nerd Font:h22",
-    "SyneMono Nerd Font:h20",
-    "JetBrainsMono Nerd Font Mono:h18",
-    "FantasqueSansMono Nerd Font Mono:h21",
-    "OperatorMono Nerd Font:h20",
-  },
-})
-vim.g["vcoolor_lowercase"] = true
-
-vim.g["clang_format#detect_style_file)"] = 1
-
-vim.g["indentLine_fileTypeExclude"] = { "dashboard" }
+local Remap = require("nycrat.keymap")
+local nnoremap = Remap.nnoremap
+local vnoremap = Remap.vnoremap
+local silent = { silent = true }
 
 require("nvim-treesitter.configs").setup({
   context_commentstring = { enable = true },
@@ -33,7 +22,34 @@ require("nvim-treesitter.configs").setup({
   },
 })
 
-require("ccc").setup()
-require("spectre").setup()
 require("nvim-autopairs").setup()
 require("nvim-surround").setup()
+require("cloak").setup()
+require("ccc").setup()
+require("harpoon").setup()
+
+vim.g["mkdp_markdown_css"] = vim.fn.expand("~/.config/nvim/md.css")
+vim.g["mkdp_theme"] = "light"
+
+local spectre = require("spectre")
+local harpoon_ui = require("harpoon.ui")
+spectre.setup()
+
+-- keymaps
+
+nnoremap("<leader>s", spectre.open)
+vnoremap("<leader>s", spectre.open_visual)
+nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
+nnoremap("<leader>gg", "<Cmd>LazyGit<CR>", silent)
+nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
+nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
+nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
+nnoremap("<leader>a", require("harpoon.mark").add_file, silent)
+nnoremap("<leader>e", harpoon_ui.toggle_quick_menu, silent)
+nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
+nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
+
+for i = 1, 10 do
+  nnoremap("<leader>" .. i % 10, function() harpoon_ui.nav_file(i) end, silent)
+  nnoremap("<leader>o" .. i % 10,  "<Cmd>TodoOpenIndex ".. i.."<CR>", silent)
+end

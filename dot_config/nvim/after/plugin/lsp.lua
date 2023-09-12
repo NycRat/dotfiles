@@ -2,7 +2,6 @@ local lsp = require("lsp-zero").preset({})
 local Remap = require("nycrat.keymap")
 local inoremap = Remap.inoremap
 local nnoremap = Remap.nnoremap
-local xnoremap = Remap.xnoremap
 
 lsp.on_attach(function(client, bufnr)
   -- lsp.default_keymaps({ buffer = bufnr })
@@ -17,14 +16,6 @@ lsp.on_attach(function(client, bufnr)
   nnoremap("K", function() vim.lsp.buf.hover() end, opts)
   -- inoremap("<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   inoremap("<C-j>", function() vim.lsp.buf.signature_help() end, opts)
-
-  -- nnoremap("<leader>m", function()
-  --   vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
-  -- end, opts)
-
-  -- xnoremap("<leader>m", function()
-  --   vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
-  -- end, opts)
 end)
 
 lsp.format_mapping("<leader>m", {
