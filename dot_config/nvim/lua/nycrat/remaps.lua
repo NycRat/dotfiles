@@ -40,7 +40,6 @@ tnoremap("<D-v>", function()
 end, silent)
 
 -- writing
-nnoremap("<C-e>", "<Cmd>Goyo<CR>", silent)
 nnoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- misc

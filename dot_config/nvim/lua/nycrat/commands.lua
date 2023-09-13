@@ -68,3 +68,41 @@ vim.api.nvim_create_user_command("UpdateAll", function()
   vim.cmd([[TSUpdateSync]])
   vim.cmd([[MasonUpdate]])
 end, {})
+
+local function getWords()
+  if vim.fn.getfsize(vim.fn.expand("%")) > 200000 then
+    return ""
+  end
+
+  if vim.fn.wordcount().visual_words == 1 then
+    return "1 word"
+  elseif not (vim.fn.wordcount().visual_words == nil) then
+    return tostring(vim.fn.wordcount().visual_words) .. " words"
+  else
+    if vim.fn.wordcount().words == 1 then
+      return "1 word"
+    else
+      return tostring(vim.fn.wordcount().words) .. " words"
+    end
+  end
+end
+
+local wordCountOn = false
+
+vim.api.nvim_create_user_command("WordCount", function()
+  if wordCountOn then
+    require("lualine").setup({
+      sections = {
+        lualine_c = { "filename" },
+      },
+    })
+    wordCountOn = true
+  else
+    require("lualine").setup({
+      sections = {
+        lualine_c = { "filename", { getWords } },
+      },
+    })
+    wordCountOn = true
+  end
+end, {})

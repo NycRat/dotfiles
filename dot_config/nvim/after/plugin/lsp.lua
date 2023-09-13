@@ -26,6 +26,7 @@ lsp.format_mapping("<leader>m", {
   servers = {
     ["rust_analyzer"] = { "rust" },
     ["gopls"] = { "go" },
+    ["pylsp"] = { "python" },
     ["null-ls"] = {
       "lua",
       "c",

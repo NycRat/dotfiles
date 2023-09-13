@@ -1,5 +1,5 @@
 require("Comment").setup({
-  ignore = "^$",
+  ignore = "^ *	*$",
 
   pre_hook = function(ctx)
     -- Only calculate commentstring for tsx filetypes

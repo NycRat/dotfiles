@@ -3,6 +3,19 @@ local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local silent = { silent = true }
 
+require("lualine").setup({
+  sections = {
+    lualine_x = {
+      {
+        require("noice").api.statusline.mode.get,
+        cond = require("noice").api.statusline.mode.has,
+        color = { fg = "#aaf7f0" },
+      },
+      "filetype",
+    },
+  },
+})
+
 require("nvim-treesitter.configs").setup({
   context_commentstring = { enable = true },
   highlight = {
@@ -27,7 +40,7 @@ require("nvim-surround").setup()
 require("cloak").setup()
 require("ccc").setup()
 require("harpoon").setup()
-
+      
 vim.g["mkdp_markdown_css"] = vim.fn.expand("~/.config/nvim/md.css")
 vim.g["mkdp_theme"] = "light"
 
@@ -51,5 +64,5 @@ nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
 
 for i = 1, 10 do
   nnoremap("<leader>" .. i % 10, function() harpoon_ui.nav_file(i) end, silent)
-  nnoremap("<leader>o" .. i % 10,  "<Cmd>TodoOpenIndex ".. i.."<CR>", silent)
+  nnoremap("<leader>o" .. i % 10, "<Cmd>TodoOpenIndex " .. i .. "<CR>", silent)
 end

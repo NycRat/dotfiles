@@ -12,8 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { "kevinhwang91/nvim-bqf", ft = "qf" },
-
   -- lsp
   {
     "VonHeikemen/lsp-zero.nvim",
@@ -50,7 +48,6 @@ require("lazy").setup({
   { "JoosepAlviste/nvim-ts-context-commentstring" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/nvim-treesitter-context" },
-  { "kylechui/nvim-surround" },
 
   -- navigation
   {
@@ -73,25 +70,23 @@ require("lazy").setup({
   { "theHamsta/nvim-dap-virtual-text" },
   { "nvim-telescope/telescope-dap.nvim" },
 
-  -- writing
-  { "junegunn/goyo.vim" },
-  { "preservim/vim-pencil" },
+  -- misc
+  { "kevinhwang91/nvim-bqf", ft = "qf" },
+  { "mbbill/undotree" },
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
   },
-
-  -- misc
-  { "mbbill/undotree" },
   { "uga-rosa/ccc.nvim" },
   { "nvim-pack/nvim-spectre" },
+  { "kylechui/nvim-surround" },
+  { "nycrat/todo.nvim" },
+
+  -- looks
   {
     "folke/noice.nvim",
     dependencies = { { "MunifTanjim/nui.nvim" }, { "rcarriga/nvim-notify" }, { "nvim-lua/plenary.nvim" } },
   },
-  { "nycrat/todo.nvim" },
-
-  -- looks
   { "laytan/cloak.nvim" },
   { "nvim-lualine/lualine.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
