@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+osascript -e "tell application \"KeyCastr\"
+  activate
+end tell
+tell application \"System Events\" to tell process \"KeyCastr\"
+  tell window 1
+    set position to {1270, 995}
+  end tell
+end tell"
+
+osascript -e "tell application \"kitty\"
+  activate
+end tell
+tell application \"System Events\" to tell process \"kitty\"
+  tell window 1
+    set size to {1728, 1000}
+    set position to {0, 117}
+  end tell
+end tell"
+
