@@ -1,2 +1,13 @@
 snippet pl Println
 	fmt.Println(${0})
+
+snippet lc Leetcode
+	package main
+
+	import "fmt"
+
+	${0}
+
+	func `vim_snippets#Filename("$1")`() {
+		fmt.Println()
+	}

@@ -1,0 +1,29 @@
+ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
+ctrl + alt - m : yabai -m space --balance
+
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - l : yabai -m window --focus east
+
+shift + alt - h : yabai -m window --space prev
+shift + alt - l : yabai -m window --space next
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+
+alt - h : yabai -m space --focus prev
+alt - l : yabai -m space --focus next
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+
+ctrl + alt + cmd - n : yabai --start-service
+ctrl + alt + cmd - m : yabai --stop-service
+

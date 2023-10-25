@@ -7,8 +7,9 @@ local tnoremap = Remap.tnoremap
 local silent = { silent = true }
 
 nnoremap("<C-z>", "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
-
 nnoremap("<C-b>", "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
+nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 
 -- easier to enter normal mode
 inoremap("jk", "<Esc>")

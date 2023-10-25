@@ -37,7 +37,6 @@ require("lazy").setup({
 
       -- Snippets
       { "L3MON4D3/LuaSnip", version = "2.*" },
-      { "rafamadriz/friendly-snippets" },
       { "honza/vim-snippets" },
     },
   },
@@ -48,6 +47,7 @@ require("lazy").setup({
   { "JoosepAlviste/nvim-ts-context-commentstring" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/nvim-treesitter-context" },
+  { "ThePrimeagen/refactoring.nvim" },
 
   -- navigation
   {
@@ -59,10 +59,12 @@ require("lazy").setup({
   { "ThePrimeagen/harpoon" },
   { "nvim-telescope/telescope.nvim" },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  { "simrat39/symbols-outline.nvim" },
 
   -- git
   { "kdheepak/lazygit.nvim" },
   { "airblade/vim-gitgutter" },
+  { "pwntester/octo.nvim" },
 
   -- Debugging
   { "mfussenegger/nvim-dap" },
@@ -77,10 +79,12 @@ require("lazy").setup({
     "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
   },
+  -- { "toppair/peek.nvim", build = "deno task --quiet build:fast" },
   { "uga-rosa/ccc.nvim" },
   { "nvim-pack/nvim-spectre" },
   { "kylechui/nvim-surround" },
   { "nycrat/todo.nvim" },
+  { "RaafatTurki/hex.nvim" },
 
   -- looks
   {

@@ -4,12 +4,6 @@ notify.setup({ fps = 120, render = "minimal", timeout = 500 })
 require("noice").setup({
   cmdline = {
     format = {
-      bash = {
-        kind = "bash",
-        pattern = "^:!",
-        icon = "$",
-        lang = "bash",
-      },
       search_and_replace = {
         kind = "replace",
         pattern = "^:%%?s/",
@@ -36,12 +30,12 @@ require("noice").setup({
     lsp_doc_border = true,
   },
   throttle = 1000 / 120,
-  -- routes = {
-  --   {
-  --     filter = { event = "msg_show", kind = "", find = "written" },
-  --     opts = { skip = true },
-  --   },
-  -- },
+  routes = {
+    {
+      filter = { event = "msg_show", kind = "", find = "written" },
+      opts = { skip = true },
+    },
+  },
   views = {
     cmdline_popup = {
       position = { row = vim.o.lines * 0.32, col = "50%" },

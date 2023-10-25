@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi # Path to your oh-my-zsh installation.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -30,21 +30,13 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 bindkey -s ^f "^utmux-sessionizer\n"
-bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
-bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')\n"
-
-source ~/.zshrc_unbind
+bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
+bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
 
 alias n="nvim"
 
-export EDITOR=nvim
-export editor=nvim
+alias gc="git commit --allow-empty-message -m ''"
 
 alias t="tmux"
 alias tk="tmux kill-session -t"
@@ -61,11 +53,13 @@ alias tree="exa -T --icons --git-ignore"
 
 alias python="python3"
 alias py="python3"
+alias pip="pip3"
 
-export GOPATH="/usr/local/go"
+export GOPATH="$HOME/go"
 
 PATH="$HOME/.local/bin/:$PATH"
-export PATH="$PATH:$(yarn global bin)"
+# export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:$HOME/.yarn/bin"
 export PYTHONUSERBASE="$HOME/local/pythonpackage"
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
 export PATH="$PYTHONUSERBASE/bin":$PATH
@@ -86,3 +80,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH=$PATH:/Users/avah/.spicetify
