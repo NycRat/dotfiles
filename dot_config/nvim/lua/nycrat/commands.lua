@@ -1,8 +1,12 @@
+local nnoremap = require("nycrat.keymap").nnoremap
+
 local build_commands = {
   c = "g++ -std=c++17 -o %:p:r.o %",
   cpp = "g++ -std=c++17 -Wall -O2 -o %:p:r.o %",
   rust = "cargo build --release",
   go = "go build",
+  -- tex = "tectonic %",
+  tex = "pdflatex %",
 }
 
 local debug_build_commands = {
@@ -18,6 +22,7 @@ local run_commands = {
   rust = "cargo run --release",
   -- go = "%:p:r.o",
   go = "go run .",
+  tex = "open %:p:r.pdf",
 }
 
 vim.api.nvim_create_user_command("Build", function()
@@ -106,3 +111,19 @@ vim.api.nvim_create_user_command("WordCount", function()
     wordCountOn = true
   end
 end, {})
+
+-- local writingModeOn = false
+
+-- vim.api.nvim_create_user_command("WritingMode", function()
+--   if writingModeOn then
+--     vim.cmd([[set nowrap]])
+--     nnoremap("j", "j")
+--     nnoremap("k", "k")
+--     writingModeOn = false
+--   else
+--     vim.cmd([[set wrap]])
+--     nnoremap("j", "gj")
+--     nnoremap("k", "gk")
+--     writingModeOn = true
+--   end
+-- end, {})
