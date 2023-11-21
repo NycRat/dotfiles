@@ -81,3 +81,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:/Users/avah/.spicetify
+export HOMEBREW_NO_AUTO_UPDATE=1

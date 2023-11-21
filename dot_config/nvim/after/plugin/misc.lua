@@ -17,16 +17,19 @@ require("lualine").setup({
 })
 
 require("nvim-treesitter.configs").setup({
-  context_commentstring = { enable = true },
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = { "latex", "markdown" },
     disable = function(lang, buf)
       local max_filesize = 100 * 1024 -- 100 KB
       local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
       if ok and stats and stats.size > max_filesize then
         return true
       end
+      if lang == "latex" then
+        return true
+      end
+      return false
     end,
   },
   indent = {
@@ -36,6 +39,15 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("hex").setup()
+require("ibl").setup({
+  indent = {
+    char = "┆",
+  },
+  scope = {
+    enabled = false,
+  },
+})
+require("gitsigns").setup()
 require("nvim-autopairs").setup()
 require("nvim-surround").setup()
 require("cloak").setup()
@@ -72,7 +84,6 @@ nnoremap("<leader>a", require("harpoon.mark").add_file, silent)
 nnoremap("<leader>e", harpoon_ui.toggle_quick_menu, silent)
 nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
 nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
-nnoremap("<leader>asd", "<Cmd>", silent)
 
 for i = 1, 10 do
   nnoremap("<leader>" .. i % 10, function() harpoon_ui.nav_file(i) end, silent)

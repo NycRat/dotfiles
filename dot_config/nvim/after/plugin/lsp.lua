@@ -16,6 +16,7 @@ lsp.on_attach(function(client, bufnr)
   nnoremap("K", function() vim.lsp.buf.hover() end, opts)
   -- inoremap("<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   inoremap("<C-j>", function() vim.lsp.buf.signature_help() end, opts)
+  nnoremap("<leader>,", vim.diagnostic.setloclist)
 end)
 
 lsp.format_mapping("<leader>m", {
@@ -27,10 +28,9 @@ lsp.format_mapping("<leader>m", {
     ["rust_analyzer"] = { "rust" },
     ["gopls"] = { "go" },
     ["pylsp"] = { "python" },
+    ["clangd"] = { "cpp", "c" },
     ["null-ls"] = {
       "lua",
-      "c",
-      "cpp",
       "json",
       "javascript",
       "typescript",

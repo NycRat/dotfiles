@@ -2,10 +2,13 @@ local Remap = require("nycrat.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
+local vnoremap = Remap.xnoremap
 local tnoremap = Remap.tnoremap
 
 local silent = { silent = true }
 
+nnoremap("<leader>", "<Nop>", silent)
+vnoremap("<leader>", "<Nop>", silent)
 nnoremap("<C-z>", "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 nnoremap("<C-b>", "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

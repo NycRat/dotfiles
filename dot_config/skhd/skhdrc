@@ -1,4 +1,5 @@
 ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
+ctrl + alt - i : yabai -m window --toggle float
 ctrl + alt - m : yabai -m space --balance
 
 ctrl + alt - j : yabai -m window --focus south
@@ -6,23 +7,38 @@ ctrl + alt - k : yabai -m window --focus north
 ctrl + alt - h : yabai -m window --focus west
 ctrl + alt - l : yabai -m window --focus east
 
-shift + alt - h : yabai -m window --space prev
-shift + alt - l : yabai -m window --space next
-shift + alt - 1 : yabai -m window --space 1
-shift + alt - 2 : yabai -m window --space 2
-shift + alt - 3 : yabai -m window --space 3
-shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
-shift + alt - 6 : yabai -m window --space 6
+shift + ctrl + alt - j : yabai -m window --swap south
+shift + ctrl + alt - k : yabai -m window --swap north
+shift + ctrl + alt - h : yabai -m window --swap west
+shift + ctrl + alt - l : yabai -m window --swap east
 
-alt - h : yabai -m space --focus prev
-alt - l : yabai -m space --focus next
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
+# shift + ctrl - h : yabai -m window --space prev
+# shift + ctrl - l : yabai -m window --space next
+shift + ctrl - 1 : yabai -m window --space 1
+shift + ctrl - 2 : yabai -m window --space 2
+shift + ctrl - 3 : yabai -m window --space 3
+shift + ctrl - 4 : yabai -m window --space 4
+shift + ctrl - 5 : yabai -m window --space 5
+shift + ctrl - 6 : yabai -m window --space 6
+shift + ctrl - 7 : yabai -m window --space 7
+shift + ctrl - 8 : yabai -m window --space 8
+shift + ctrl - 9 : yabai -m window --space 9
+shift + ctrl - 0 : yabai -m window --space 10
+
+# ctrl - h : yabai -m space --focus prev
+# ctrl - l : yabai -m space --focus next
+ctrl - left : yabai -m space --focus prev
+ctrl - right : yabai -m space --focus next
+ctrl - 1 : yabai -m space --focus 1
+ctrl - 2 : yabai -m space --focus 2
+ctrl - 3 : yabai -m space --focus 3
+ctrl - 4 : yabai -m space --focus 4
+ctrl - 5 : yabai -m space --focus 5
+ctrl - 6 : yabai -m space --focus 6
+ctrl - 7 : yabai -m space --focus 7
+ctrl - 8 : yabai -m space --focus 8
+ctrl - 9 : yabai -m space --focus 9
+ctrl - 0 : yabai -m space --focus 10
 
 ctrl + alt + cmd - n : yabai --start-service
 ctrl + alt + cmd - m : yabai --stop-service

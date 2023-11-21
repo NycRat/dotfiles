@@ -63,7 +63,7 @@ require("lazy").setup({
 
   -- git
   { "kdheepak/lazygit.nvim" },
-  { "airblade/vim-gitgutter" },
+  { "lewis6991/gitsigns.nvim" },
   { "pwntester/octo.nvim" },
 
   -- Debugging
@@ -85,6 +85,7 @@ require("lazy").setup({
   { "kylechui/nvim-surround" },
   { "nycrat/todo.nvim" },
   { "RaafatTurki/hex.nvim" },
+  { "lervag/vimtex" },
 
   -- looks
   {
@@ -93,7 +94,7 @@ require("lazy").setup({
   },
   { "laytan/cloak.nvim" },
   { "nvim-lualine/lualine.nvim" },
-  { "lukas-reineke/indent-blankline.nvim" },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   { dir = "~/personal/repositories/MISC/rose-pine" },
   -- { "nycrat/rose-pine" },
 })
