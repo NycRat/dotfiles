@@ -38,10 +38,16 @@ require("nvim-treesitter.configs").setup({
   },
 })
 
+require("nvim-ts-autotag").setup()
+require("treesitter-context").setup({
+  max_lines = 1,
+})
+
 require("hex").setup()
 require("ibl").setup({
   indent = {
-    char = "┆",
+    -- char = "┆",
+    char = "│",
   },
   scope = {
     enabled = false,
@@ -52,7 +58,6 @@ require("nvim-autopairs").setup()
 require("nvim-surround").setup()
 require("cloak").setup()
 require("ccc").setup()
-require("octo").setup()
 require("harpoon").setup()
 require("symbols-outline").setup({
   -- auto_preview = true, -- bad rn
@@ -72,6 +77,10 @@ spectre.setup()
 
 -- keymaps
 
+nnoremap("<leader>dd", function() require("duck").hatch("ඞ", 10) end)
+-- nnoremap("<leader>dd", function() require("duck").hatch("🦀", 10) end)
+nnoremap("<leader>dk", function() require("duck").cook() end)
+
 nnoremap("<leader>S", spectre.open)
 xnoremap("<leader>S", spectre.open_visual)
 nnoremap("<leader>u", "<Cmd>UndotreeToggle<CR>", silent)
@@ -84,6 +93,7 @@ nnoremap("<leader>a", require("harpoon.mark").add_file, silent)
 nnoremap("<leader>e", harpoon_ui.toggle_quick_menu, silent)
 nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
 nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
+nnoremap("<leader>db", "<Cmd>DBUIToggle<CR>", silent)
 
 for i = 1, 10 do
   nnoremap("<leader>" .. i % 10, function() harpoon_ui.nav_file(i) end, silent)

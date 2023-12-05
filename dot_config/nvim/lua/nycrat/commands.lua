@@ -18,14 +18,14 @@ local debug_build_commands = {
 }
 
 local run_commands = {
-  c = "!%:p:r.o",
-  cpp = "1%:p:r.o",
-  rust = "!cargo run --release",
+  c = "%:p:r.o",
+  cpp = "%:p:r.o",
+  rust = "cargo run --release",
   -- go = "%:p:r.o",
-  go = "!go run .",
+  go = "go run .",
   -- tex = "open %:p:r.pdf",
   tex = "",
-  javascript = "!node %",
+  javascript = "node %",
 }
 
 vim.api.nvim_create_user_command("Build", function()

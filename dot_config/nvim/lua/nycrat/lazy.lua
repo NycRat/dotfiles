@@ -41,9 +41,13 @@ require("lazy").setup({
     },
   },
 
+  { "simrat39/rust-tools.nvim" },
+  { "tikhomirov/vim-glsl" },
+
   -- nice to have
   { "numToStr/Comment.nvim" },
   { "windwp/nvim-autopairs" },
+  { "windwp/nvim-ts-autotag" },
   { "JoosepAlviste/nvim-ts-context-commentstring" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/nvim-treesitter-context" },
@@ -64,7 +68,6 @@ require("lazy").setup({
   -- git
   { "kdheepak/lazygit.nvim" },
   { "lewis6991/gitsigns.nvim" },
-  { "pwntester/octo.nvim" },
 
   -- Debugging
   { "mfussenegger/nvim-dap" },
@@ -75,17 +78,27 @@ require("lazy").setup({
   -- misc
   { "kevinhwang91/nvim-bqf", ft = "qf" },
   { "mbbill/undotree" },
-  {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && npm install",
-  },
-  -- { "toppair/peek.nvim", build = "deno task --quiet build:fast" },
   { "uga-rosa/ccc.nvim" },
   { "nvim-pack/nvim-spectre" },
   { "kylechui/nvim-surround" },
   { "nycrat/todo.nvim" },
   { "RaafatTurki/hex.nvim" },
   { "lervag/vimtex" },
+  { "tamton-aquib/duck.nvim" },
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    dependencies = {
+      { "tpope/vim-dadbod", lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+    },
+    cmd = {
+      "DBUI",
+      "DBUIToggle",
+      "DBUIAddConnection",
+      "DBUIFindBuffer",
+    },
+    init = function() vim.g.db_ui_use_nerd_fonts = 1 end,
+  },
 
   -- looks
   {

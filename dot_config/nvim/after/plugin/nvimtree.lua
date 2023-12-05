@@ -18,16 +18,16 @@ end
 require("nvim-tree").setup({
   on_attach = my_on_attach,
   view = {
-    side = "right",
-    width = 40,
-  },
-  renderer = {
-    special_files = {
-      -- "Cargo.toml",
-      -- "Makefile",
-      -- "README.md",
-      -- "readme.md",
-      -- ".gitignore",
+    -- side = "right",
+    -- width = 40,
+    float = {
+      enable = true,
+      open_win_config = {
+        width = math.floor(vim.o.columns * 0.8),
+        height = vim.o.lines - 6,
+        row = 2,
+        col = math.floor(vim.o.columns * 0.1),
+      }
     },
   },
   actions = { open_file = { quit_on_open = true } },
@@ -35,6 +35,6 @@ require("nvim-tree").setup({
   git = { enable = true, ignore = false, timeout = 500 },
 })
 
-nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR><Cmd>only<CR>", silent)
-nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR><Cmd>only<CR>", silent)
+nnoremap("<leader><tab>", "<Cmd>NvimTreeToggle<CR>", silent)
+nnoremap("<leader>f<tab>", "<Cmd>NvimTreeFindFileToggle<CR>", silent)
 nnoremap("<leader>z", "<Cmd>NvimTreeCollapse<CR>", silent)

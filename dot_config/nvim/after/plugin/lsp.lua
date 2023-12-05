@@ -7,15 +7,15 @@ lsp.on_attach(function(client, bufnr)
   -- lsp.default_keymaps({ buffer = bufnr })
   local opts = { buffer = bufnr, silent = true }
 
-  nnoremap("<leader>.", function() vim.lsp.buf.code_action() end, opts)
-  nnoremap("<leader>rn", function() vim.lsp.buf.rename() end, opts)
-  nnoremap("<leader>fi", function() vim.lsp.buf.implementation() end, opts)
-  nnoremap("<leader>fr", function() vim.lsp.buf.references() end, opts)
-  nnoremap("<leader>ff", function() vim.lsp.buf.definition() end, opts)
-  nnoremap("<leader>fF", function() vim.lsp.buf.declaration() end, opts)
-  nnoremap("K", function() vim.lsp.buf.hover() end, opts)
+  nnoremap("<leader>.", vim.lsp.buf.code_action, opts)
+  nnoremap("<leader>rn", vim.lsp.buf.rename, opts)
+  nnoremap("<leader>fi", vim.lsp.buf.implementation, opts)
+  nnoremap("<leader>fr", vim.lsp.buf.references, opts)
+  nnoremap("<leader>ff", vim.lsp.buf.definition, opts)
+  nnoremap("<leader>fF", vim.lsp.buf.declaration, opts)
+  nnoremap("K", vim.lsp.buf.hover, opts)
   -- inoremap("<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-  inoremap("<C-j>", function() vim.lsp.buf.signature_help() end, opts)
+  inoremap("<C-j>", vim.lsp.buf.signature_help, opts)
   nnoremap("<leader>,", vim.diagnostic.setloclist)
 end)
 
@@ -58,7 +58,6 @@ require("mason-nvim-dap").setup({
   },
 })
 
-local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 require("cmp").setup({
   performance = {
     debounce = 0,
@@ -81,8 +80,21 @@ require("cmp").setup({
   },
 })
 
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+-- FIX THE THINGY WITH THE WARNING
+local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+capabilities.offsetEncoding = "utf-8"
+capabilities.offset_encoding = "utf-8"
+capabilities.clang = {}
+capabilities.clang.offsetEncoding = "utf-8"
+capabilities.clang.offset_encoding = "utf-8"
+lspconfig.clangd.setup({ capabilities = capabilities })
+-- AAAAAA
 
 local null_ls = require("null-ls")
 local null_opts = lsp.build_options("null-ls", {})
@@ -107,4 +119,17 @@ require("mason-null-ls").setup({
   ensure_installed = nil,
   automatic_installation = false,
   handlers = {},
+})
+
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<leader>rt", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>rtt", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
 })

@@ -59,3 +59,20 @@ nnoremap("<leader>cb", "<Cmd>Build<CR>", silent)
 nnoremap("<leader>cd", "<Cmd>DebugBuild<CR>", silent)
 nnoremap("<leader>cl", "<Cmd>Run<CR>", silent)
 nnoremap("<leader>cr", "<Cmd>Ha<CR>", silent)
+
+
+-- ahdshdad
+inoremap("<Down>", "<Nop>")
+inoremap("<Left>", "<Nop>")
+inoremap("<Right>", "<Nop>")
+inoremap("<Up>", "<Nop>")
+
+nnoremap("<Down>", "<Nop>")
+nnoremap("<Left>", "<Nop>")
+nnoremap("<Right>", "<Nop>")
+nnoremap("<Up>", "<Nop>")
+
+vnoremap("<Down>", "<Nop>")
+vnoremap("<Left>", "<Nop>")
+vnoremap("<Right>", "<Nop>")
+vnoremap("<Up>", "<Nop>")

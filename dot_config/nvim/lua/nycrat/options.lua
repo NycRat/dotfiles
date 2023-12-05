@@ -36,7 +36,7 @@ local options = {
   colorcolumn = "80",
   updatetime = 20,
   scrolloff = 15,
-  mouse = "a",
+  mouse = "",
   guicursor = "a:block",
 
   title = true,
