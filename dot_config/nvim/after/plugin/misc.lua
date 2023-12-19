@@ -57,8 +57,12 @@ require("gitsigns").setup()
 require("nvim-autopairs").setup()
 require("nvim-surround").setup()
 require("cloak").setup()
-require("ccc").setup()
-require("harpoon").setup()
+require("ccc").setup({
+  highlighter = {
+    auto_enable = true,
+    lsp = true,
+  },
+})
 require("symbols-outline").setup({
   -- auto_preview = true, -- bad rn
   auto_close = true,
@@ -72,13 +76,12 @@ vim.g["mkdp_markdown_css"] = vim.fn.expand("~/.config/nvim/md.css")
 vim.g["mkdp_theme"] = "light"
 
 local spectre = require("spectre")
-local harpoon_ui = require("harpoon.ui")
 spectre.setup()
 
 -- keymaps
 
-nnoremap("<leader>dd", function() require("duck").hatch("ඞ", 10) end)
--- nnoremap("<leader>dd", function() require("duck").hatch("🦀", 10) end)
+-- nnoremap("<leader>dd", function() require("duck").hatch("ඞ", 10) end)
+nnoremap("<leader>dd", function() require("duck").hatch("🦀", 10) end)
 nnoremap("<leader>dk", function() require("duck").cook() end)
 
 nnoremap("<leader>S", spectre.open)
@@ -89,13 +92,10 @@ nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
 nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
 nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
 nnoremap("<leader>s", "<Cmd>SymbolsOutline<CR>", silent)
-nnoremap("<leader>a", require("harpoon.mark").add_file, silent)
-nnoremap("<leader>e", harpoon_ui.toggle_quick_menu, silent)
 nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
 nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
 nnoremap("<leader>db", "<Cmd>DBUIToggle<CR>", silent)
 
 for i = 1, 10 do
-  nnoremap("<leader>" .. i % 10, function() harpoon_ui.nav_file(i) end, silent)
   nnoremap("<leader>o" .. i % 10, "<Cmd>TodoOpenIndex " .. i .. "<CR>", silent)
 end

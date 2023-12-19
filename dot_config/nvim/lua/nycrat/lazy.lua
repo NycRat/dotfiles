@@ -60,7 +60,7 @@ require("lazy").setup({
     lazy = false,
     dependencies = { { "nvim-tree/nvim-web-devicons" } },
   },
-  { "ThePrimeagen/harpoon" },
+  { "ThePrimeagen/harpoon", branch = "harpoon2" },
   { "nvim-telescope/telescope.nvim" },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "simrat39/symbols-outline.nvim" },

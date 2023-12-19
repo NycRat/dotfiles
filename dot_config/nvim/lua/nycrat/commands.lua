@@ -115,6 +115,24 @@ vim.api.nvim_create_user_command("WordCount", function()
   end
 end, {})
 
+local rot13 = false
+local rot13_id = 0
+
+vim.api.nvim_create_user_command("Rot13", function()
+  if not rot13 then
+    rot13_id = vim.api.nvim_create_autocmd({ "InsertCharPre" }, {
+      pattern = { "*" },
+      callback = function(ev)
+        -- print(vim.inspect(ev))
+        local keys = vim.api.nvim_replace_termcodes("<Esc>vg?a", true, false, true)
+        vim.api.nvim_feedkeys(keys, "n", false)
+      end,
+    })
+  else
+    vim.api.nvim_del_autocmd(rot13_id)
+  end
+end, {})
+
 -- local writingModeOn = false
 
 -- vim.api.nvim_create_user_command("WritingMode", function()

@@ -7,3 +7,4 @@ yabai -m config window_placement second_child
 # yabai -m config window_gap 10
 
 yabai -m rule --add app="Stats" manage=off
+yabai -m rule --add app="GIMP" manage=off
