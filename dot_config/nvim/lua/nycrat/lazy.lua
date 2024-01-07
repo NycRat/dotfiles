@@ -24,7 +24,7 @@ require("lazy").setup({
       { "jay-babu/mason-nvim-dap.nvim" },
 
       -- null-ls
-      { "jose-elias-alvarez/null-ls.nvim" },
+      { "nvimtools/none-ls.nvim" },
       { "jay-babu/mason-null-ls.nvim" },
 
       -- Autocompletion
@@ -109,5 +109,6 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim" },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   { dir = "~/personal/repositories/MISC/rose-pine" },
+  { "folke/tokyonight.nvim" },
   -- { "nycrat/rose-pine" },
 })
