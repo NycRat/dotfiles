@@ -35,7 +35,7 @@ bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{p
 bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
 
 alias n="nvim"
-alias qalc="qalc -s 'exp=-1'"
+alias qalc="qalc -s 'exp -1'"
 
 alias gc="git commit --allow-empty-message -m ''"
 
