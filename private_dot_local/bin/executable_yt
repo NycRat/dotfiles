@@ -14,8 +14,10 @@ osascript -e "tell application \"kitty\"
 end tell
 tell application \"System Events\" to tell process \"kitty\"
   tell window 1
-    set size to {1728, 1000}
-    set position to {0, 117}
+    set size to {1728, 972}
+    set position to {0, 145}
+    -- set size to {1728, 1000}
+    -- set position to {0, 117}
   end tell
 end tell"
 

@@ -31,8 +31,8 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 bindkey -s ^f "^utmux-sessionizer\n"
-bindkey -s ^z "^ufont-switcher; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
-bindkey -s ^b "^ufont-switcher -d; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
+# bindkey -s ^s "^ufont-switcher; kill -SIGUSR1 \$(ps -A | grep 'kitty$' | awk '{print \$1}')\n"
+bindkey -s ^s "^ufont-switcher; pkill -SIGUSR1 -a kitty\n"
 
 alias n="nvim"
 alias qalc="qalc -s 'exp -1'"

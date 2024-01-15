@@ -9,10 +9,8 @@ local silent = { silent = true }
 
 nnoremap("<leader>", "<Nop>", silent)
 vnoremap("<leader>", "<Nop>", silent)
-nnoremap("<C-z>", "<Cmd>silent !font-switcher; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
-nnoremap("<C-b>", "<Cmd>silent !font-switcher -d; kill -SIGUSR1 $(ps -A | grep 'kitty$' | awk '{print $1}')<CR>")
+nnoremap("<C-s>", "<Cmd>silent !font-switcher; pkill -SIGUSR1 -a kitty<CR>")
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 
 -- easier to enter normal mode
 inoremap("jk", "<Esc>")
@@ -44,7 +42,7 @@ tnoremap("<D-v>", function()
 end, silent)
 
 -- writing
-nnoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
+-- nnoremap("<C-s>", "<Cmd>set spell!<CR>", silent)
 
 -- misc
 nnoremap("<leader>rp", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
