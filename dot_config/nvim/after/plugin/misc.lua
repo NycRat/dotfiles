@@ -96,6 +96,8 @@ nnoremap("<leader>s", "<Cmd>SymbolsOutline<CR>", silent)
 nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
 nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
 nnoremap("<leader>db", "<Cmd>DBUIToggle<CR>", silent)
+nnoremap("<leader>h", "<Cmd>HexToggle<CR>", silent)
+nnoremap("<leader>l", "<Cmd>CloakToggle<CR>", silent)
 
 for i = 1, 10 do
   nnoremap("<leader>o" .. i % 10, "<Cmd>TodoOpenIndex " .. i .. "<CR>", silent)
