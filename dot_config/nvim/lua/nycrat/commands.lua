@@ -26,6 +26,7 @@ local run_commands = {
   -- tex = "open %:p:r.pdf",
   tex = "",
   javascript = "node %",
+  python = "python3 %",
 }
 
 vim.api.nvim_create_user_command("Build", function()
@@ -132,6 +133,8 @@ vim.api.nvim_create_user_command("Rot13", function()
     vim.api.nvim_del_autocmd(rot13_id)
   end
 end, {})
+
+vim.api.nvim_create_user_command("D", function() print(":D") end, {})
 
 -- local writingModeOn = false
 

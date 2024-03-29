@@ -1,5 +1,6 @@
 ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
 ctrl + alt - i : yabai -m window --toggle float
+ctrl + alt - o : yabai -m window --toggle sticky
 ctrl + alt - m : yabai -m space --balance
 
 ctrl + alt - j : yabai -m window --focus south

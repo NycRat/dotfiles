@@ -13,6 +13,7 @@ zstyle ':omz:update' frequency 7
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git z zsh-syntax-highlighting)
+source $HOME/.zshnvm
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,7 +61,7 @@ export GOPATH="$HOME/go"
 
 PATH="$HOME/.local/bin/:$PATH"
 # export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:$HOME/.yarn/bin"
+# export PATH="$PATH:$HOME/.yarn/bin"
 export PYTHONUSERBASE="$HOME/local/pythonpackage"
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
 export PATH="$PYTHONUSERBASE/bin":$PATH

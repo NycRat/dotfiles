@@ -63,10 +63,8 @@ require("ccc").setup({
     lsp = true,
   },
 })
-require("symbols-outline").setup({
-  -- auto_preview = true, -- bad rn
-  auto_close = true,
-})
+
+require("outline").setup({})
 
 require("refactoring").setup()
 nnoremap("<leader>rr", require("refactoring").select_refactor)
@@ -92,7 +90,7 @@ nnoremap("<leader>gb", "<Cmd>ToggleBlameLine<CR>", silent)
 nnoremap("<leader>co", "<Cmd>CccPick<CR>", silent)
 nnoremap("<leader>cc", "<Cmd>CccHighlighterToggle<CR>", silent)
 nnoremap("<leader>cv", "<Cmd>CccConvert<CR>", silent)
-nnoremap("<leader>s", "<Cmd>SymbolsOutline<CR>", silent)
+nnoremap("<leader>s", "<Cmd>Outline<CR>", silent)
 nnoremap("<leader>oo", "<Cmd>TodoClose<CR>", silent)
 nnoremap("<leader>ol", "<Cmd>TodoOpenFileList<CR>", silent)
 nnoremap("<leader>db", "<Cmd>DBUIToggle<CR>", silent)

@@ -63,7 +63,7 @@ require("lazy").setup({
   { "ThePrimeagen/harpoon", branch = "harpoon2" },
   { "nvim-telescope/telescope.nvim" },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  { "simrat39/symbols-outline.nvim" },
+  { "hedyhli/outline.nvim" },
 
   -- git
   { "kdheepak/lazygit.nvim" },
@@ -71,6 +71,7 @@ require("lazy").setup({
 
   -- Debugging
   { "mfussenegger/nvim-dap" },
+  { "nvim-neotest/nvim-nio" },
   { "rcarriga/nvim-dap-ui" },
   { "theHamsta/nvim-dap-virtual-text" },
   { "nvim-telescope/telescope-dap.nvim" },
@@ -100,6 +101,8 @@ require("lazy").setup({
     init = function() vim.g.db_ui_use_nerd_fonts = 1 end,
   },
   { "tveskag/nvim-blame-line" },
+
+  { "alec-gibson/nvim-tetris" },
 
   -- looks
   {
