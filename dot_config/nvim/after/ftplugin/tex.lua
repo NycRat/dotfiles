@@ -5,3 +5,5 @@ nnoremap("j", "gj")
 nnoremap("k", "gk")
 
 vim.opt.conceallevel = 2
+
+vim.cmd([[WordCount]])

@@ -54,17 +54,19 @@ alias la="exa -la --icons"
 alias tree="exa -T --icons --git-ignore"
 
 alias python="python3"
-alias py="python3"
-alias pip="pip3"
+alias py="python3.11"
+alias vscode="nvim"
+alias code="nvim"
+alias emacs="nvim"
 
 export GOPATH="$HOME/go"
 
 PATH="$HOME/.local/bin/:$PATH"
 # export PATH="$PATH:$(yarn global bin)"
 # export PATH="$PATH:$HOME/.yarn/bin"
-export PYTHONUSERBASE="$HOME/local/pythonpackage"
-export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
-export PATH="$PYTHONUSERBASE/bin":$PATH
+# export PYTHONUSERBASE="$HOME/local/pythonpackage"
+# export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":$PYTHONPATH
+# export PATH="$PYTHONUSERBASE/bin":$PATH
 export PATH="$HOME/.cargo/bin":$PATH
 export PATH=$PATH:$GOPATH/bin
 

@@ -1,5 +1,5 @@
 local notify = require("notify")
-notify.setup({ fps = 120, render = "minimal", timeout = 500 })
+notify.setup({ fps = 120, render = "minimal", timeout = 500, background_colour = "#000000" })
 
 require("noice").setup({
   cmdline = {

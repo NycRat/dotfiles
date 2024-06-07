@@ -9,3 +9,5 @@ yabai -m config window_placement second_child
 yabai -m rule --add app="Stats" manage=off
 yabai -m rule --add app="GIMP" manage=off
 yabai -m rule --add app="Inkscape" manage=off
+
+yabai -m space 10 --layout stack

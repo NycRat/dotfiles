@@ -3,14 +3,22 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/personal ~/personal/learn ~/personal/practice ~/personal/repositories/* ~/.config ~/school ~/B -mindepth 1 -maxdepth 1 -type d | fzf)
+    directories=$(find ~/personal ~/personal/practice ~/personal/repositories/* ~/.config ~/school/* ~/B -mindepth 1 -maxdepth 1 -type d)
+    sessions=$(tmux list-sessions)
+    # selected=$(echo -e "$directories\n$sessions\n/A" | fzf)
+    selected=$(echo -e "$sessions\n-------------------------------------------------\n$directories" | fzf)
 fi
 
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+if [[ $selected == /* ]]; then
+  selected_name=$(basename "$selected" | tr . _)
+else
+  selected_name=$(echo "$selected" | awk -F':' '{print $1}')
+fi
+
 tmux_running=$(pgrep tmux) # IF HAS SERVER RUNNING
 
 if [[ -z $TMUX ]] || [[ -z $tmux_running ]]; then

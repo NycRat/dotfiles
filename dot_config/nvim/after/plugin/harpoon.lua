@@ -30,7 +30,7 @@ harpoon:setup({
   },
 })
 
-nnoremap("<leader>a", function() harpoon:list():append() end, silent)
+nnoremap("<leader>a", function() harpoon:list():add() end, silent)
 nnoremap("<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, silent)
 
 for i = 1, 10 do

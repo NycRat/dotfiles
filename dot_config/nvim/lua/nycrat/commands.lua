@@ -80,7 +80,7 @@ end, {})
 
 local function getWords()
   if vim.fn.getfsize(vim.fn.expand("%")) > 200000 then
-    return ""
+    return "too many words"
   end
 
   if vim.fn.wordcount().visual_words == 1 then
@@ -102,14 +102,14 @@ vim.api.nvim_create_user_command("WordCount", function()
   if wordCountOn then
     require("lualine").setup({
       sections = {
-        lualine_c = { "filename" },
+        lualine_y = {},
       },
     })
-    wordCountOn = true
+    wordCountOn = false
   else
     require("lualine").setup({
       sections = {
-        lualine_c = { "filename", { getWords } },
+        lualine_y = { getWords },
       },
     })
     wordCountOn = true

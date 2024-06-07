@@ -42,7 +42,9 @@ lsp.format_mapping("<leader>m", {
       "txt",
       "text",
       "html",
+      "plaintex",
       "tex",
+      "latex",
       "haskell",
       "plaintex",
     },
@@ -85,6 +87,11 @@ local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+vim.lsp.set_log_level("debug")
+
 -- FIX THE THINGY WITH THE WARNING
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -94,8 +101,72 @@ capabilities.offset_encoding = "utf-8"
 capabilities.clang = {}
 capabilities.clang.offsetEncoding = "utf-8"
 capabilities.clang.offset_encoding = "utf-8"
+
 lspconfig.clangd.setup({ capabilities = capabilities })
--- AAAAAA
+
+local ar_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+lspconfig.arduino_language_server.setup({
+  cmd = {
+    "arduino-language-server",
+    "-cli-config",
+    "/Users/avah/Library/Arduino15/arduino-cli.yaml",
+    "-fqbn",
+    "arduino:avr:uno",
+  },
+  filetypes = { "arduino", "ino" },
+  capabilities = ar_capabilities,
+})
+
+-- local config = {
+--   cache_activate = true,
+--   cache_filetypes = { "tex", "bib" },
+--   cache_root = vim.fn.stdpath("cache"),
+--   reverse_search_start_cmd = function()
+--     print("reverse searching")
+--     return true
+--   end,
+--   reverse_search_edit_cmd = vim.cmd.edit,
+--   reverse_search_end_cmd = function() return true end,
+--   file_permission_mode = 438,
+-- }
+--
+-- require("texlabconfig").setup(config)
+--
+-- local executable = "/Applications/Skim.app/Contents/SharedSupport/displayline"
+-- local args = { "%l", "%p", "%f" }
+--
+-- lspconfig.texlab.setup({
+--   settings = {
+--     texlab = {
+--       build = {
+--         executable = "tectonic",
+--         args = {
+--           "-X",
+--           "compile",
+--           "%f",
+--           "--pdf",
+--           "--interaction=nonstopmode",
+--           "--synctex=1",
+--           "--pvc",
+--           "--keep-logs",
+--           "--keep-intermediates",
+--           "--outdir",
+--           "aux",
+--         },
+--
+--         forwardSearchAfter = true,
+--         onSave = false,
+--         auxDirectory = "aux",
+--         logDirectory = "log",
+--       },
+--       forwardSearch = {
+--         executable = executable,
+--         args = args,
+--       },
+--     },
+--   },
+-- })
 
 local null_ls = require("null-ls")
 local null_opts = lsp.build_options("null-ls", {})
@@ -111,9 +182,20 @@ local txt_formatter = {
   }),
 }
 
+local tex_formatter = {
+  method = null_ls.methods.FORMATTING,
+  filetypes = { "latex", "tex", "plaintex" },
+  generator = null_ls.formatter({
+    command = "latexindent",
+    args = { "$FILENAME" },
+    to_stdin = true,
+    from_stderr = true,
+  }),
+}
+
 null_ls.setup({
   on_attach = function(client, bufnr) null_opts.on_attach(client, bufnr) end,
-  sources = { txt_formatter },
+  sources = { txt_formatter, tex_formatter },
 })
 
 require("mason-null-ls").setup({

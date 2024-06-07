@@ -101,8 +101,7 @@ require("lazy").setup({
     init = function() vim.g.db_ui_use_nerd_fonts = 1 end,
   },
   { "tveskag/nvim-blame-line" },
-
-  { "alec-gibson/nvim-tetris" },
+  { "itchyny/calendar.vim" },
 
   -- looks
   {
@@ -110,9 +109,20 @@ require("lazy").setup({
     dependencies = { { "MunifTanjim/nui.nvim" }, { "rcarriga/nvim-notify" }, { "nvim-lua/plenary.nvim" } },
   },
   { "laytan/cloak.nvim" },
-  { "nvim-lualine/lualine.nvim" },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "ColorScheme",
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "rose-pine",
+        },
+      })
+    end,
+  },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-  { dir = "~/personal/repositories/MISC/rose-pine" },
+  -- { dir = "~/personal/repositories/MISC/rose-pine" },
+  { "rose-pine/neovim", name = "rose-pine", lazy = false },
   { "folke/tokyonight.nvim" },
   -- { "nycrat/rose-pine" },
 })

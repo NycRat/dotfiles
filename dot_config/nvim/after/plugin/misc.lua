@@ -3,6 +3,17 @@ local nnoremap = Remap.nnoremap
 local xnoremap = Remap.xnoremap
 local silent = { silent = true }
 
+vim.g.calendar_google_calendar = 1
+vim.g.calendar_google_task = 1
+
+vim.cmd([[source ~/.cache/calendar.vim/credentials.vim]])
+
+vim.g.vimtex_syntax_conceal_disable = 1
+vim.g.vimtex_view_method = "skim"
+vim.g.vimtex_compiler_latexmk = {
+  out_dir = "out",
+}
+
 require("lualine").setup({
   sections = {
     lualine_x = {
@@ -12,6 +23,16 @@ require("lualine").setup({
         color = { fg = "#aaf7f0" },
       },
       "filetype",
+    },
+    lualine_y = {},
+    lualine_z = {
+      function()
+        if vim.fn.line("$") == 1 then
+          return "1 line"
+        else
+          return vim.fn.line("$") .. " lines"
+        end
+      end,
     },
   },
 })
