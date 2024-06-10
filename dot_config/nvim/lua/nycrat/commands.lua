@@ -7,6 +7,7 @@ local build_commands = {
   go = "!go build",
   -- tex = "pdflatex %",
   tex = "VimtexCompile",
+  typst = "!typst compile %",
   javascript = "",
 }
 
@@ -23,8 +24,8 @@ local run_commands = {
   rust = "cargo run --release",
   -- go = "%:p:r.o",
   go = "go run .",
-  -- tex = "open %:p:r.pdf",
-  tex = "",
+  tex = "open %:p:r.pdf",
+  typst = "open %:p:r.pdf",
   javascript = "node %",
   python = "python3 %",
 }

@@ -11,6 +11,8 @@ nnoremap("<leader>", "<Nop>", silent)
 vnoremap("<leader>", "<Nop>", silent)
 nnoremap("<C-s>", "<Cmd>silent !font-switcher; pkill -SIGUSR1 -a kitty<CR>")
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+inoremap("<C-s>", "<Cmd>silent !font-switcher; pkill -SIGUSR1 -a kitty<CR>")
+inoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- easier to enter normal mode
 inoremap("jk", "<Esc>")

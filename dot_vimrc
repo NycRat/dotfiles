@@ -1,0 +1,24 @@
+inoremap jk <esc>
+nnoremap <space>w :w<cr>
+nnoremap <space>q :q<cr>
+
+nnoremap <space><tab> :Ex<cr>
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+set expandtab
+set autoindent
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set showtabline=0
+set noswapfile
+set nowrap
+set scrolloff=999
+set number
+set relativenumber
+syntax on
+filetype on

@@ -51,6 +51,20 @@ lsp.format_mapping("<leader>m", {
   },
 })
 
+lsp.configure("tailwindcss", {
+    init_options = {
+    userLanguages = {
+      rust = "html",
+    }
+  },
+  filetypes = {
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "rust"
+  },
+})
+
 lsp.setup()
 
 require("mason-nvim-dap").setup({
@@ -117,56 +131,6 @@ lspconfig.arduino_language_server.setup({
   filetypes = { "arduino", "ino" },
   capabilities = ar_capabilities,
 })
-
--- local config = {
---   cache_activate = true,
---   cache_filetypes = { "tex", "bib" },
---   cache_root = vim.fn.stdpath("cache"),
---   reverse_search_start_cmd = function()
---     print("reverse searching")
---     return true
---   end,
---   reverse_search_edit_cmd = vim.cmd.edit,
---   reverse_search_end_cmd = function() return true end,
---   file_permission_mode = 438,
--- }
---
--- require("texlabconfig").setup(config)
---
--- local executable = "/Applications/Skim.app/Contents/SharedSupport/displayline"
--- local args = { "%l", "%p", "%f" }
---
--- lspconfig.texlab.setup({
---   settings = {
---     texlab = {
---       build = {
---         executable = "tectonic",
---         args = {
---           "-X",
---           "compile",
---           "%f",
---           "--pdf",
---           "--interaction=nonstopmode",
---           "--synctex=1",
---           "--pvc",
---           "--keep-logs",
---           "--keep-intermediates",
---           "--outdir",
---           "aux",
---         },
---
---         forwardSearchAfter = true,
---         onSave = false,
---         auxDirectory = "aux",
---         logDirectory = "log",
---       },
---       forwardSearch = {
---         executable = executable,
---         args = args,
---       },
---     },
---   },
--- })
 
 local null_ls = require("null-ls")
 local null_opts = lsp.build_options("null-ls", {})
