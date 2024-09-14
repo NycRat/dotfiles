@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for f in *.MOV; do
+  ffmpeg -i $f -c copy -movflags +faststart ${f%%.*}.mp4
+done

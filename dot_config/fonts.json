@@ -1,0 +1,24 @@
+[
+  {
+    "font_family": "Iosevka Light",
+    "bold_font": "Iosevka Bold",
+    "italic_font": "Iosevka Light Italic",
+    "bold_italic_font": "Iosevka Bold Italic",
+    "font_size": 30.0
+  },
+  {
+    "font_family": "Iosevka",
+    "font_size": 30.0
+  },
+  {
+    "font_family": "Iosevka Regular",
+    "bold_font": "Iosevka Heavy",
+    "italic_font": "Iosevka Italic",
+    "bold_italic_font": "Iosevka Heavy Italic",
+    "font_size": 30.0
+  },
+  {
+    "font_family": "honchokomono",
+    "font_size": 36.0
+  }
+]

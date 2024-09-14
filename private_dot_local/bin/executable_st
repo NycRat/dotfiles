@@ -1,0 +1,15 @@
+#!/bin/sh
+
+input=$(pmset -g | grep "SleepDisabled" | awk '{print $2}')
+
+if [ "$input" -eq 0 ]; then
+  toggled=1
+  echo SLEEP DISABLED
+elif [ "$input" -eq 1 ]; then
+  toggled=0
+  echo SLEEP ENABLED
+else
+  echo "ERROR: $input"
+fi
+
+builtin command sudo pmset disablesleep $toggled
