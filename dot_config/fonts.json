@@ -7,7 +7,7 @@
     "font_size": 30.0
   },
   {
-    "font_family": "Iosevka",
+    "font_family": "Iosevka SS14",
     "font_size": 30.0
   },
   {
@@ -20,5 +20,11 @@
   {
     "font_family": "honchokomono",
     "font_size": 36.0
+  },
+  {
+    "font_family": "CMU Typewriter Text",
+    "italic_font": "CMU Typewriter Text Oblique",
+    "bold_italic_font": "CMU Typewriter Text Bold",
+    "font_size": 30.0
   }
 ]

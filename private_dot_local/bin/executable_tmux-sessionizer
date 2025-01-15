@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    directories=$(find ~/personal ~/personal/practice ~/personal/repositories/* ~/.config ~/school/* ~/B ~/work -mindepth 1 -maxdepth 1 -type d)
+    directories=$(find ~/1_personal ~/1_personal/repositories/* ~/2_school/* ~/3_work ~/5_vaulted/Teaching ~/.config -mindepth 1 -maxdepth 1 -type d)
     sessions=$(tmux list-sessions)
     # selected=$(echo -e "$directories\n$sessions\n/A" | fzf)
     selected=$(echo -e "$sessions\n-------------------------------------------------\n$directories" | fzf)

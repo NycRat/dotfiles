@@ -1,0 +1,20 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+yabai -m config                  \
+  layout           bsp           \
+  window_placement second_child  \
+  menubar_opacity  1.0           \
+#  window_gap       10            \
+#  top_padding      10            \
+#  bottom_padding   10            \
+#  left_padding     10            \
+#  right_padding    10
+
+yabai -m rule --add app="Stats" manage=off
+yabai -m rule --add app="Godot" manage=off
+# yabai -m rule --add app="GIMP" manage=off
+# yabai -m rule --add app="Inkscape" manage=off
+# yabai -m rule --add app="Kitty" padding=0
+
+yabai -m space 10 --layout stack
