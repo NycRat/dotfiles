@@ -76,6 +76,6 @@ macos_window_resizable yes
 map cmd+t new_tab_with_cwd
 
 # BEGIN_KITTY_THEME
-# Rosé Pine
-include light-theme.conf
+# Dawnfox
+include current-theme.conf
 # END_KITTY_THEME

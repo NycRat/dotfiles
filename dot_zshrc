@@ -78,6 +78,3 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export SSL_CERT_FILE="/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem"
 
 export GPG_TTY=$(tty)
-
-# Theme
-export THEME=light
